@@ -1,0 +1,14 @@
+'atom-text-editor.vim-mode-plus.normal-mode[data-grammar="source clojure"]':
+  'g f':          'chlorine:go-to-var-definition'
+  'ctrl-d':       'chlorine:doc-for-var'
+  'space c':      'chlorine:connect-clojure-socket-repl'
+  'space l':      'chlorine:clear-console'
+  'shift-enter':  'chlorine:evaluate-block'
+  'ctrl-enter':   'chlorine:evaluate-top-block'
+  'space space':  'inline-results:clear-all'
+  'space x':      'chlorine:run-tests-in-ns'
+  'space t':      'chlorine:run-test-for-var'
+
+'atom-text-editor.vim-mode-plus.insert-mode[data-grammar="source clojure"]':
+  'shift-enter': 'chlorine:evaluate-block'
+  'ctrl-enter': 'chlorine:evaluate-top-block'
