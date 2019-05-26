@@ -1,4 +1,7 @@
 chlorine@0.1.2
+document-outline@2.1.2
 ink@0.10.5
+lisp-paredit@0.6.0
+structure-view@0.2.1
 vim-mode-plus@1.36.0
 

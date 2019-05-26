@@ -1,5 +1,9 @@
 "*":
   core:
     telemetryConsent: "limited"
+  editor:
+    softWrap: true
+  "lisp-paredit": {}
+  "markdown-preview": {}
   welcome:
     showOnStartup: false
