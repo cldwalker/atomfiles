@@ -7,3 +7,14 @@
   "markdown-preview": {}
   welcome:
     showOnStartup: false
+".clojure.source":
+  "bracket-matcher":
+    autocompleteCharacters: [
+      "()"
+      "[]"
+      "{}"
+      "\"\""
+      "‘’"
+      "«»"
+      "‹›"
+    ]

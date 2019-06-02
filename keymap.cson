@@ -9,6 +9,9 @@
   'space x':      'chlorine:run-tests-in-ns'
   'space t':      'chlorine:run-test-for-var'
 
+'atom-text-editor.vim-mode-plus.visual-mode[data-grammar="source clojure"]':
+  'alt-enter':    'chlorine:evaluate-selection'
+
 'atom-text-editor.vim-mode-plus.insert-mode[data-grammar="source clojure"]':
   'shift-enter': 'chlorine:evaluate-block'
   'ctrl-enter': 'chlorine:evaluate-top-block'
