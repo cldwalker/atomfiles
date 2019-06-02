@@ -11,6 +11,9 @@
     softWrap: true
   "lisp-paredit": {}
   "markdown-preview": {}
+  swackets:
+    colorBrackets: false
+    colorParens: true
   welcome:
     showOnStartup: false
 ".clojure.source":
