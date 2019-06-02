@@ -15,6 +15,8 @@
 'atom-text-editor.vim-mode-plus.insert-mode[data-grammar="source clojure"]':
   'shift-enter': 'chlorine:evaluate-block'
   'ctrl-enter': 'chlorine:evaluate-top-block'
+  'enter':   'lisp-paredit:newline'
+  'tab': 'lisp-paredit:indent'
 
 # normal mode important since w/o space KEY stalls in insert mode
 'atom-text-editor.vim-mode-plus.normal-mode[data-grammar~="clojure"], atom-text-editor.vim-mode-plus.normal-mode[data-grammar~="lisp"], atom-text-editor.vim-mode-plus.normal-mode[data-grammar~="newlisp"], atom-text-editor.vim-mode-plus.normal-mode[data-grammar~="racket"], atom-text-editor.vim-mode-plus.normal-mode[data-grammar~="scheme"]':

@@ -24,3 +24,5 @@
       "«»"
       "‹›"
     ]
+  editor:
+    autoIndent: false
