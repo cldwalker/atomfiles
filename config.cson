@@ -3,6 +3,9 @@
     disabledPackages: [
       "exception-reporting"
     ]
+    packagesWithKeymapsDisabled: [
+      "lisp-paredit"
+    ]
     telemetryConsent: "limited"
   editor:
     softWrap: true
