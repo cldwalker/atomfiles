@@ -1,3 +1,5 @@
+## Clojure + Lisp
+## ==============
 # Most of the keybindings here take into account vim-mode.
 # If you don't use vim you can just drop the vim-mode selectors
 # e.g. atom-text-editor.vim-mode-plus.normal-mode -> atom-text-editor
@@ -47,7 +49,28 @@
 'atom-text-editor.vim-mode-plus.insert-mode[data-grammar~="clojure"].autocomplete-active':
   'enter': 'autocomplete-plus:confirm'
 
+## General
+## =======
 'atom-workspace atom-text-editor':
   # Useful for outlines
   'alt-k': 'editor:move-line-up'
   'alt-j': 'editor:move-line-down'
+  'alt-l': 'window:focus-pane-on-right'
+
+'atom-workspace atom-pane, atom-workspace atom-text-editor:not(.mini)':
+  'ctrl-h': 'window:focus-pane-on-left'
+  'ctrl-j': 'window:focus-pane-below'
+  'ctrl-k': 'window:focus-pane-above'
+  'ctrl-l': 'window:focus-pane-on-right'
+
+  'ctrl-|': 'pane:split-right-and-copy-active-item'
+  'ctrl--': 'pane:split-down-and-copy-active-item'
+
+## Github
+## ======
+'.github-CommitView-editor atom-text-editor:not([mini])':
+  'ctrl-k': 'core:focus-previous'
+
+'.github-StagingView':
+  'ctrl-j': 'core:focus-next'
+  'ctrl-k': 'core:focus-previous'
