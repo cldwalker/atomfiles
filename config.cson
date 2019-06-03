@@ -1,4 +1,9 @@
 "*":
+  "activate-power-mode":
+    autoToggle: false
+    plugins:
+      playAudio: false
+      screenShake: true
   core:
     disabledPackages: [
       "exception-reporting"
@@ -6,14 +11,25 @@
     packagesWithKeymapsDisabled: [
       "lisp-paredit"
     ]
+    projectHome: "/Users/me/code"
     telemetryConsent: "limited"
   editor:
+    scrollPastEnd: true
     softWrap: true
+  "find-and-replace":
+    projectSearchResultsPaneSplitDirection: "right"
+  "fuzzy-finder":
+    useRipGrep: true
   "lisp-paredit": {}
   "markdown-preview": {}
+  "spell-check": {}
   swackets:
     colorBrackets: false
     colorParens: true
+  tabs:
+    enableVcsColoring: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
 ".clojure.source":

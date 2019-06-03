@@ -37,6 +37,8 @@
   'space k': 'lisp-paredit:up-sexp'
   'space l': 'lisp-paredit:forward-sexp'
   'space h': 'lisp-paredit:backward-sexp'
+  # Needed to start selection
+  'space /': 'lisp-paredit:expand-selection'
 
 'atom-text-editor.vim-mode-plus.visual-mode[data-grammar~="clojure"]':
   'space /': 'lisp-paredit:expand-selection'

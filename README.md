@@ -1,6 +1,6 @@
 ## Description
-This is my personal atom config which includes my preferred packages and keybindings. My config is
-centered around having vim keybindings, using clojure(script) and web development. This config is
+This is my atom config which fully reproduces my keybindings and installed packages 🎉. My config is
+centered around web development workflows and primarily using clojure and vim keybindings. This config is
 being used on osx with atom version >= 1.37.0.
 
 ## Setup
@@ -13,7 +13,7 @@ cd ~/.atom
 apm install --packages-file my-packages.txt
 ```
 
-## Misc
+## Miscellaneous
 
 After having modified your package list in atom, update the list with `apm ls --installed -bare > ~/.atom/my-packages.txt`.
 
