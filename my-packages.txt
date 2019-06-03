@@ -1,3 +1,5 @@
+activate-power-mode@2.7.0
+autocomplete-emojis@2.5.0
 chlorine@0.1.2
 document-outline@2.1.2
 ink@0.10.5
