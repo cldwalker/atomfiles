@@ -41,6 +41,9 @@
   'space h': 'lisp-paredit:backward-sexp'
   # Needed to start selection
   'space /': 'lisp-paredit:expand-selection'
+  # Remaps simulate autoindent which was turned off due to bugginess
+  'o':       'keystroke o tab'
+  'O':       'keystroke O tab'
 
 'atom-text-editor.vim-mode-plus.visual-mode[data-grammar~="clojure"]':
   'space /': 'lisp-paredit:expand-selection'
@@ -55,16 +58,22 @@
   # Useful for outlines
   'alt-k': 'editor:move-line-up'
   'alt-j': 'editor:move-line-down'
+  'ctrl-i': 'cursor-history:next'
+  'ctrl-o': 'cursor-history:prev'
 
 'atom-workspace atom-pane, atom-workspace atom-text-editor:not(.mini)':
+  # Pane management
   'ctrl-h': 'window:focus-pane-on-left'
   'ctrl-j': 'window:focus-pane-below'
   'ctrl-k': 'window:focus-pane-above'
   'ctrl-l': 'window:focus-pane-on-right'
+  'ctrl-, P': 'choose-pane:start'
 
+  # Open files
   'ctrl-|': 'pane:split-right-and-copy-active-item'
   'ctrl--': 'pane:split-down-and-copy-active-item'
 
+  # Open specific files
   'ctrl-, p': 'settings-view:install-packages-and-themes'
   'ctrl-, i': 'settings-view:view-installed-packages'
   'ctrl-, k': 'application:open-your-keymap'

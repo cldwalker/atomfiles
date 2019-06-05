@@ -13,6 +13,8 @@
     ]
     projectHome: "/Users/me/code"
     telemetryConsent: "limited"
+  "document-outline":
+    showByDefault: false
   editor:
     scrollPastEnd: true
     softWrap: true
@@ -30,6 +32,7 @@
     enableVcsColoring: true
   "tree-view":
     hideVcsIgnoredFiles: true
+  "vim-mode-plus": {}
   welcome:
     showOnStartup: false
 ".clojure.source":

@@ -1,8 +1,12 @@
 activate-power-mode@2.7.0
 autocomplete-emojis@2.5.0
 chlorine@0.1.2
+choose-pane@0.8.0
+cursor-history@0.13.2
 document-outline@2.1.2
+git-plus@8.6.3
 ink@0.10.5
+keystroke@0.4.0
 lisp-paredit@0.6.0
 structure-view@0.2.1
 swackets@0.35.0
