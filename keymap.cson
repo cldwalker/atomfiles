@@ -20,16 +20,20 @@
   'ctrl-l': 'window:focus-pane-on-right'
   'ctrl-, P': 'choose-pane:start'
 
-  # Open files
+  # Pane splitting
   'ctrl-|': 'pane:split-right-and-copy-active-item'
   'ctrl--': 'pane:split-down-and-copy-active-item'
 
   # Open specific files
-  'ctrl-, p': 'settings-view:install-packages-and-themes'
-  'ctrl-, i': 'settings-view:view-installed-packages'
+  'ctrl-, i': 'settings-view:install-packages-and-themes'
+  'ctrl-, p': 'settings-view:view-installed-packages'
   'ctrl-, k': 'application:open-your-keymap'
   'ctrl-, c': 'application:open-your-config'
   'ctrl-, s': 'application:open-your-init-script'
+
+  # Project manipulation
+  'ctrl-, a': 'project-folder:add'
+  'ctrl-, r': 'project-folder:remove'
 
 ## Github
 ## ======

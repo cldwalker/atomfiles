@@ -9,6 +9,9 @@
       "text.plain": [
         "otl"
       ]
+      "source.clojure": [
+        "keymap"
+      ]
     disabledPackages: [
       "exception-reporting"
     ]
@@ -28,6 +31,11 @@
     useRipGrep: true
   "lisp-paredit": {}
   "markdown-preview": {}
+  "project-folder":
+    gitProjectDirectories: [
+      "/Users/me/code"
+    ]
+    gitProjectSearchMaxDepth: 2
   "spell-check": {}
   swackets:
     colorBrackets: false
