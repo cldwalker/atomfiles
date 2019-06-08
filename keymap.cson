@@ -25,8 +25,8 @@
   'ctrl--': 'pane:split-down-and-copy-active-item'
 
   # Open specific files
-  'ctrl-, i': 'settings-view:install-packages-and-themes'
-  'ctrl-, p': 'settings-view:view-installed-packages'
+  'ctrl-, i': 'me:install-packages-and-themes-with-focus'
+  'ctrl-, p': 'me:view-installed-packages-with-focus'
   'ctrl-, k': 'application:open-your-keymap'
   'ctrl-, c': 'application:open-your-config'
   'ctrl-, s': 'application:open-your-init-script'
@@ -43,6 +43,16 @@
 '.github-StagingView':
   'ctrl-j': 'core:focus-next'
   'ctrl-k': 'core:focus-previous'
+
+## Normal-mode enhancements
+## ========================
+'atom-text-editor.vim-mode-plus.normal-mode':
+  # Use bookmark commands under mark keycombo
+  'm l': 'bookmarks:view-all'
+  'm t': 'bookmarks:toggle-bookmark'
+  'm n': 'bookmarks:jump-to-next-bookmark'
+  'm p': 'bookmarks:jump-to-previous-bookmark'
+
 
 ## Clojure + Lisp
 ## ==============

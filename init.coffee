@@ -1,3 +1,29 @@
+## General Commands
+## ================
+
+call_editor_command = (command) ->
+  editor = atom.workspace.getActiveTextEditor()
+  editorView = atom.views.getView(editor)
+  atom.commands.dispatch(editorView, command)
+
+# Tweaks opening of panel section to have reasonable default focus
+atom.commands.add 'atom-text-editor', 'me:install-packages-and-themes-with-focus', ->
+  call_editor_command('settings-view:install-packages-and-themes')
+  # Hacky but effective
+  setTimeout ->
+    document.querySelector('.search-container .editor-container input').focus()
+  , 500
+
+# Tweaks opening of panel section to have reasonable default focus
+atom.commands.add 'atom-text-editor', 'me:view-installed-packages-with-focus', ->
+  call_editor_command('settings-view:view-installed-packages')
+  # Hacky but effective
+  setTimeout ->
+    document.querySelector('.section-container .editor-container input').focus()
+  , 500
+
+## Clojure Commands
+## ================
 # Some of the commands below are copied and tweaked from https://github.com/seancorfield/atom-chlorine-setup/blob/master/init.coffee
 wrap_in_rebl_submit = (code) ->
   "(let [value " + code + "] " +
