@@ -15,7 +15,13 @@ apm install --packages-file my-packages.txt
 
 ## Miscellaneous
 
+### Updating Packages List
 After having modified your package list in atom, update the list with `apm ls --installed -bare > ~/.atom/my-packages.txt`.
+
+### Attempted Packages
+These are packages I've tried. As someone who has built many editor plugins, this is not meant to make anyone feel bad about their hard work. This section is mostly for me but sharing in case it helps others.
+
+* https://atom.io/packages/git-time-machine - Pretty visualization of commits. Didn't find the default UI to be conducive to a productive keyboard workflow.
 
 ## Credits
 

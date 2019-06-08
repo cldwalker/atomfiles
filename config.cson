@@ -6,11 +6,11 @@
       screenShake: true
   core:
     customFileTypes:
-      "text.plain": [
-        "otl"
-      ]
       "source.clojure": [
         "keymap"
+      ]
+      "text.plain": [
+        "otl"
       ]
     disabledPackages: [
       "exception-reporting"
