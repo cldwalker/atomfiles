@@ -1,3 +1,41 @@
+## General
+## =======
+'atom-workspace atom-text-editor':
+  # Useful for outlines
+  'alt-k': 'editor:move-line-up'
+  'alt-j': 'editor:move-line-down'
+  # Vim-like history
+  'ctrl-i': 'cursor-history:next'
+  'ctrl-o': 'cursor-history:prev'
+  # Git actions
+  'alt-g l': 'git-plus:log-current-file'
+
+'atom-workspace atom-pane, atom-workspace atom-text-editor:not(.mini)':
+  # Pane movement
+  'ctrl-h': 'window:focus-pane-on-left'
+  'ctrl-j': 'window:focus-pane-below'
+  'ctrl-k': 'window:focus-pane-above'
+  'ctrl-l': 'window:focus-pane-on-right'
+  'ctrl-, P': 'choose-pane:start'
+
+  # Open files
+  'ctrl-|': 'pane:split-right-and-copy-active-item'
+  'ctrl--': 'pane:split-down-and-copy-active-item'
+
+  # Open specific files
+  'ctrl-, p': 'settings-view:install-packages-and-themes'
+  'ctrl-, i': 'settings-view:view-installed-packages'
+  'ctrl-, k': 'application:open-your-keymap'
+
+## Github
+## ======
+'.github-CommitView-editor atom-text-editor:not([mini])':
+  'ctrl-k': 'core:focus-previous'
+
+'.github-StagingView':
+  'ctrl-j': 'core:focus-next'
+  'ctrl-k': 'core:focus-previous'
+
 ## Clojure + Lisp
 ## ==============
 # Most of the keybindings here take into account vim-mode.
@@ -51,38 +89,3 @@
 
 'atom-text-editor.vim-mode-plus.insert-mode[data-grammar~="clojure"].autocomplete-active':
   'enter': 'autocomplete-plus:confirm'
-
-## General
-## =======
-'atom-workspace atom-text-editor':
-  # Useful for outlines
-  'alt-k': 'editor:move-line-up'
-  'alt-j': 'editor:move-line-down'
-  'ctrl-i': 'cursor-history:next'
-  'ctrl-o': 'cursor-history:prev'
-
-'atom-workspace atom-pane, atom-workspace atom-text-editor:not(.mini)':
-  # Pane management
-  'ctrl-h': 'window:focus-pane-on-left'
-  'ctrl-j': 'window:focus-pane-below'
-  'ctrl-k': 'window:focus-pane-above'
-  'ctrl-l': 'window:focus-pane-on-right'
-  'ctrl-, P': 'choose-pane:start'
-
-  # Open files
-  'ctrl-|': 'pane:split-right-and-copy-active-item'
-  'ctrl--': 'pane:split-down-and-copy-active-item'
-
-  # Open specific files
-  'ctrl-, p': 'settings-view:install-packages-and-themes'
-  'ctrl-, i': 'settings-view:view-installed-packages'
-  'ctrl-, k': 'application:open-your-keymap'
-
-## Github
-## ======
-'.github-CommitView-editor atom-text-editor:not([mini])':
-  'ctrl-k': 'core:focus-previous'
-
-'.github-StagingView':
-  'ctrl-j': 'core:focus-next'
-  'ctrl-k': 'core:focus-previous'
