@@ -5,6 +5,10 @@
       playAudio: false
       screenShake: true
   core:
+    customFileTypes:
+      "text.plain": [
+        "otl"
+      ]
     disabledPackages: [
       "exception-reporting"
     ]

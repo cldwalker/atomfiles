@@ -9,6 +9,8 @@
   'ctrl-o': 'cursor-history:prev'
   # Git actions
   'alt-g l': 'git-plus:log-current-file'
+  'alt-g P': 'github:pull'
+  'ctrl-, q': 'core:cancel'
 
 'atom-workspace atom-pane, atom-workspace atom-text-editor:not(.mini)':
   # Pane movement
@@ -26,6 +28,8 @@
   'ctrl-, p': 'settings-view:install-packages-and-themes'
   'ctrl-, i': 'settings-view:view-installed-packages'
   'ctrl-, k': 'application:open-your-keymap'
+  'ctrl-, c': 'application:open-your-config'
+  'ctrl-, s': 'application:open-your-init-script'
 
 ## Github
 ## ======
