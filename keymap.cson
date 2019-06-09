@@ -7,11 +7,8 @@
   # Vim-like history
   'ctrl-i': 'cursor-history:next'
   'ctrl-o': 'cursor-history:prev'
-  # Git actions
-  'alt-g l': 'git-plus:log-current-file'
-  'alt-g P': 'github:pull'
-  'ctrl-, q': 'core:cancel'
 
+# Unsure if this is the right selector for general non-editor commands
 'atom-workspace atom-pane, atom-workspace atom-text-editor:not(.mini)':
   # Pane movement
   'ctrl-h': 'window:focus-pane-on-left'
@@ -32,8 +29,18 @@
   'ctrl-, s': 'application:open-your-init-script'
 
   # Project manipulation
-  'ctrl-, a': 'project-folder:add'
-  'ctrl-, r': 'project-folder:remove'
+  # prefix: o(pen)
+  'ctrl-, o a': 'project-folder:add'
+  'ctrl-, o r': 'project-folder:remove'
+
+  # Git actions
+  'alt-g l': 'git-plus:log-current-file'
+  'alt-g L': 'git-plus:log'
+  'alt-g P': 'github:pull'
+  'ctrl-, q': 'core:cancel'
+
+  # Misc
+  'ctrl-, r': 'window:reload'
 
 ## Github
 ## ======
@@ -76,7 +83,7 @@
 
 'atom-text-editor.vim-mode-plus.insert-mode[data-grammar="source clojure"]':
   'shift-enter': 'chlorine:evaluate-block '
-  'ctrl- enter': 'chlorine:evaluate-top-block'
+  'ctrl-enter': 'chlorine:evaluate-top-block'
   'enter':       'lisp-paredit:newline'
   'tab':         'lisp-paredit:indent'
 

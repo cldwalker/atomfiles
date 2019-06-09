@@ -29,6 +29,9 @@
     projectSearchResultsPaneSplitDirection: "right"
   "fuzzy-finder":
     useRipGrep: true
+  "git-plus":
+    general:
+      splitPane: "Right"
   "lisp-paredit": {}
   "markdown-preview": {}
   "project-folder":
