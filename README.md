@@ -22,6 +22,7 @@ After having modified your package list in atom, update the list with `apm ls --
 These are packages I've tried. As someone who has built many editor plugins, this is not meant to make anyone feel bad about their hard work. This section is mostly for me but sharing in case it helps others.
 
 * https://atom.io/packages/git-time-machine - Pretty visualization of commits. Didn't find the default UI to be conducive to a productive keyboard workflow.
+* https://atom.io/packages/maximize-panes - [Basic functionality didn't work](https://github.com/santip/maximize-panes/issues/23)
 
 ## Credits
 

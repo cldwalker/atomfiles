@@ -37,6 +37,12 @@
   'alt-g l': 'git-plus:log-current-file'
   'alt-g L': 'git-plus:log'
   'alt-g P': 'github:pull'
+  # prefix: s(tash)
+  'alt-g s l': 'git-plus:manage-stashes'
+  'alt-g s p': 'git-plus:stash-pop'
+  'alt-g s s': 'git-plus:stash-save'
+  'alt-g s m': 'git-plus:stash-save-message'
+  'alt-g s a': 'git-plus:stash-apply'
   'ctrl-, q': 'core:cancel'
 
   # Misc
