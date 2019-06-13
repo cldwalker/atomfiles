@@ -1,5 +1,7 @@
+Zen@0.18.0
 activate-power-mode@2.7.0
 advanced-open-file@0.16.8
+atom-fuzzy-grep@0.17.2
 autocomplete-emojis@2.5.0
 chlorine@0.1.2
 choose-pane@0.8.0

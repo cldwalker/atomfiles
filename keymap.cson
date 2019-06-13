@@ -28,8 +28,9 @@
   'ctrl-, c': 'application:open-your-config'
   'ctrl-, s': 'application:open-your-init-script'
 
-  # Project manipulation
   # prefix: o(pen)
+  'ctrl-, o o': 'advanced-open-file:toggle'
+  # Project manipulation
   'ctrl-, o a': 'project-folder:add'
   'ctrl-, o r': 'project-folder:remove'
 
@@ -50,6 +51,7 @@
 
   # Misc
   'ctrl-, r': 'window:reload'
+  'shift-cmd-g': 'fuzzy-grep:toggle'
 
 ## Github
 ## ======

@@ -1,9 +1,13 @@
 "*":
+  Zen:
+    gutter: true
   "activate-power-mode":
     autoToggle: false
     plugins:
       playAudio: false
       screenShake: true
+  "atom-fuzzy-grep":
+    grepCommandString: "git grep -i -n"
   core:
     customFileTypes:
       "source.clojure": [
@@ -28,6 +32,7 @@
   "find-and-replace":
     projectSearchResultsPaneSplitDirection: "right"
   "fuzzy-finder":
+    preserveLastSearch: true
     useRipGrep: true
   "git-plus":
     general:
