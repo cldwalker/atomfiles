@@ -10,12 +10,15 @@
 
 # Unsure if this is the right selector for general non-editor commands
 'atom-workspace atom-pane, atom-workspace atom-text-editor:not(.mini)':
-  # Pane movement
+  # Pane focus + movement
   'ctrl-h': 'window:focus-pane-on-left'
   'ctrl-j': 'window:focus-pane-below'
   'ctrl-k': 'window:focus-pane-above'
   'ctrl-l': 'window:focus-pane-on-right'
-  'ctrl-, P': 'choose-pane:start'
+  # prefix: p(ane)
+  'ctrl-, p c': 'choose-pane:start'
+  'ctrl-, p h': 'window:move-active-item-to-pane-on-left'
+  'ctrl-, p l': 'pane:split-right-and-move-active-item'
 
   # Pane splitting
   'ctrl-|': 'pane:split-right-and-copy-active-item'
@@ -23,13 +26,15 @@
 
   # Open specific files
   'ctrl-, i': 'me:install-packages-and-themes-with-focus'
-  'ctrl-, p': 'me:view-installed-packages-with-focus'
   'ctrl-, k': 'application:open-your-keymap'
   'ctrl-, c': 'application:open-your-config'
   'ctrl-, s': 'application:open-your-init-script'
 
+  # Open misc things
+  # Like :e
+  'ctrl-, e': 'advanced-open-file:toggle'
   # prefix: o(pen)
-  'ctrl-, o o': 'advanced-open-file:toggle'
+  'ctrl-, o p': 'me:view-installed-packages-with-focus'
   # Project manipulation
   'ctrl-, o a': 'project-folder:add'
   'ctrl-, o r': 'project-folder:remove'
@@ -122,6 +127,3 @@
 'atom-text-editor.vim-mode-plus.visual-mode[data-grammar~="clojure"]':
   'space /': 'lisp-paredit:expand-selection'
   'tab':     'lisp-paredit:indent'
-
-'atom-text-editor.vim-mode-plus.insert-mode[data-grammar~="clojure"].autocomplete-active':
-  'enter': 'autocomplete-plus:confirm'

@@ -8,6 +8,10 @@
       screenShake: true
   "atom-fuzzy-grep":
     grepCommandString: "git grep -i -n"
+  "autocomplete-plus":
+    confirmCompletion: "tab"
+  "command-palette":
+    preserveLastSearch: true
   core:
     customFileTypes:
       "source.clojure": [
