@@ -46,6 +46,7 @@
   'alt-g d': 'git-plus:diff-all'
   'alt-g C': 'git-plus:commit-all'
   'alt-g a': 'git-plus:commit-amend'
+  'alt-g b': 'git-blame:toggle'
   # prefix: s(tash)
   'alt-g s l': 'git-plus:manage-stashes'
   'alt-g s p': 'git-plus:stash-pop'

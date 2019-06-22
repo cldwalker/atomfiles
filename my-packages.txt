@@ -7,6 +7,7 @@ chlorine@0.1.2
 choose-pane@0.8.0
 cursor-history@0.13.2
 document-outline@2.1.2
+git-blame@1.8.0
 git-plus@8.6.3
 ink@0.10.5
 keystroke@0.4.0

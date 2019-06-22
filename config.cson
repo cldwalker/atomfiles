@@ -25,6 +25,7 @@
     ]
     packagesWithKeymapsDisabled: [
       "lisp-paredit"
+      "git-blame"
     ]
     projectHome: "/Users/me/code"
     telemetryConsent: "limited"
@@ -38,6 +39,10 @@
   "fuzzy-finder":
     preserveLastSearch: true
     useRipGrep: true
+  "git-blame":
+    columnWidth: 318
+    ignoreWhiteSpaceDiffs: true
+    showLastNames: false
   "git-plus":
     general:
       splitPane: "Right"
@@ -54,8 +59,7 @@
     colorParens: true
   tabs:
     enableVcsColoring: true
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   "vim-mode-plus": {}
   welcome:
     showOnStartup: false
