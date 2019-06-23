@@ -43,6 +43,7 @@
   'alt-g l': 'git-plus:log-current-file'
   'alt-g L': 'git-plus:log'
   'alt-g P': 'github:pull'
+  'alt-g p': 'git-puns:github-push-with-joke'
   'alt-g d': 'git-plus:diff-all'
   'alt-g C': 'git-plus:commit-all'
   'alt-g a': 'git-plus:commit-amend'
@@ -53,7 +54,7 @@
   'alt-g s s': 'git-plus:stash-save'
   'alt-g s m': 'git-plus:stash-save-message'
   'alt-g s a': 'git-plus:stash-apply'
-  'ctrl-, q': 'core:cancel'
+  'ctrl-, q': 'core:cancel'                
 
   # Misc
   'ctrl-, r': 'window:reload'
@@ -100,9 +101,10 @@
 
 'atom-text-editor.vim-mode-plus.insert-mode[data-grammar="source clojure"]':
   'shift-enter': 'chlorine:evaluate-block '
-  'ctrl-enter': 'chlorine:evaluate-top-block'
+  'ctrl-enter':  'chlorine:evaluate-top-block'
   'enter':       'lisp-paredit:newline'
-  'tab':         'lisp-paredit:indent'
+  # Can't just use 'tab' b/c it overrides snippets
+  'ctrl-, tab':  'lisp-paredit:indent'
 
 # Normal-mode important since w/o it 'space' acts as leader key in insert mode
 # and then requires 2 spaces to create a space
