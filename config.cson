@@ -46,6 +46,8 @@
   "git-plus":
     general:
       splitPane: "Right"
+    remoteInteractions:
+      pullRebase: true
   "lisp-paredit": {}
   "markdown-preview": {}
   "project-folder":
@@ -59,7 +61,8 @@
     colorParens: true
   tabs:
     enableVcsColoring: true
-  "tree-view": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   "vim-mode-plus": {}
   welcome:
     showOnStartup: false

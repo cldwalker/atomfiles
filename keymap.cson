@@ -42,7 +42,8 @@
   # Git actions
   'alt-g l': 'git-plus:log-current-file'
   'alt-g L': 'git-plus:log'
-  'alt-g P': 'github:pull'
+  # Using git-plus b/c I can --rebase
+  'alt-g P': 'git-plus:pull'
   'alt-g p': 'git-puns:github-push-with-joke'
   'alt-g d': 'git-plus:diff-all'
   'alt-g C': 'git-plus:commit-all'
@@ -54,7 +55,7 @@
   'alt-g s s': 'git-plus:stash-save'
   'alt-g s m': 'git-plus:stash-save-message'
   'alt-g s a': 'git-plus:stash-apply'
-  'ctrl-, q': 'core:cancel'                
+  'ctrl-, q': 'core:cancel'
 
   # Misc
   'ctrl-, r': 'window:reload'
