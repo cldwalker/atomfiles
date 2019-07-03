@@ -15,17 +15,22 @@
   'ctrl-j': 'window:focus-pane-below'
   'ctrl-k': 'window:focus-pane-above'
   'ctrl-l': 'window:focus-pane-on-right'
-  # prefix: p(ane)
+  # prefix: p(ane) or p(ackage)
   'ctrl-, p c': 'choose-pane:start'
   'ctrl-, p h': 'window:move-active-item-to-pane-on-left'
   'ctrl-, p l': 'pane:split-right-and-move-active-item'
+  # package
+  'ctrl-, p i': 'me:install-packages-and-themes-with-focus'
+  'ctrl-, p s': 'me:view-installed-packages-with-focus'
+  'ctrl-, p a': 'package-switch:start-packages'
+  'ctrl-, p d': 'package-switch:stop-packages'
+  'ctrl-, p o': 'open-package:toggle'
 
   # Pane splitting
   'ctrl-|': 'pane:split-right-and-copy-active-item'
   'ctrl--': 'pane:split-down-and-copy-active-item'
 
   # Open specific files
-  'ctrl-, i': 'me:install-packages-and-themes-with-focus'
   'ctrl-, k': 'application:open-your-keymap'
   'ctrl-, c': 'application:open-your-config'
   'ctrl-, s': 'application:open-your-init-script'
@@ -34,7 +39,6 @@
   # Like :e
   'ctrl-, e': 'advanced-open-file:toggle'
   # prefix: o(pen)
-  'ctrl-, o p': 'me:view-installed-packages-with-focus'
   # Project manipulation
   'ctrl-, o a': 'project-folder:add'
   'ctrl-, o r': 'project-folder:remove'
