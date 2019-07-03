@@ -15,6 +15,9 @@ apm install --packages-file my-packages.txt
 
 ## Miscellaneous
 
+### Personal Package
+I also have [git-puns](https://github.com/cldwalker/git-puns) installed. I have not included it in the setup as it is still experimental. So far it is providing a quite handy [ClojureScript REPL](https://github.com/cldwalker/git-puns#repl-features) for introspecting Atom.
+
 ### Updating Packages List
 After having modified your package list in atom, update the list with `apm ls --installed -bare > ~/.atom/my-packages.txt`.
 
