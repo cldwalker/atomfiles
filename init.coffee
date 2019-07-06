@@ -22,6 +22,10 @@ atom.commands.add 'atom-text-editor', 'me:view-installed-packages-with-focus', -
     document.querySelector('.section-container .editor-container input').focus()
   , 500
 
+atom.commands.add 'atom-text-editor', 'me:copy-command', ->
+  command_name = document.querySelector('.command-palette li.selected').getAttribute('data-event-name')
+  atom.clipboard.write(command_name)
+
 ## Clojure Commands
 ## ================
 # Some of the commands below are copied and tweaked from https://github.com/seancorfield/atom-chlorine-setup/blob/master/init.coffee

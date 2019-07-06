@@ -26,6 +26,7 @@ These are packages I've tried. As someone who has built many editor plugins, thi
 
 * https://atom.io/packages/git-time-machine - Pretty visualization of commits. Didn't find the default UI to be conducive to a productive keyboard workflow.
 * https://atom.io/packages/maximize-panes - [Basic functionality didn't work](https://github.com/santip/maximize-panes/issues/23)
+* https://atom.io/packages/move-panes - This functionality already exists with the default commands `Pane: Move Active Item To Pane on ...`
 
 ## Credits
 

@@ -17,7 +17,9 @@
   'ctrl-l': 'window:focus-pane-on-right'
   # prefix: p(ane) or p(ackage)
   'ctrl-, p c': 'choose-pane:start'
-  'ctrl-, p h': 'window:move-active-item-to-pane-on-left'
+  'ctrl-, p h': 'pane:split-left-and-move-active-item'
+  'ctrl-, p j': 'window:move-active-item-to-pane-on-left'
+  'ctrl-, p k': 'window:move-active-item-to-pane-on-right'
   'ctrl-, p l': 'pane:split-right-and-move-active-item'
   # package
   'ctrl-, p i': 'me:install-packages-and-themes-with-focus'
@@ -63,7 +65,11 @@
 
   # Misc
   'ctrl-, r': 'window:reload'
-  'shift-cmd-g': 'fuzzy-grep:toggle'
+
+## Command Palette
+## =================
+'.command-palette':
+  'cmd-c': 'me:copy-command'
 
 ## Github
 ## ======
