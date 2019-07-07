@@ -26,6 +26,27 @@ atom.commands.add 'atom-text-editor', 'me:copy-command', ->
   command_name = document.querySelector('.command-palette li.selected').getAttribute('data-event-name')
   atom.clipboard.write(command_name)
 
+# From https://github.com/atom/fuzzy-finder/issues/81#issuecomment-339870281.
+# Tweaked unsaved case to stay in pane
+atom.commands.add '.fuzzy-finder atom-text-editor[mini]', 'me:replace-pane-item', ->
+  # you want to open in an empty pane
+  if typeof atom.workspace.getActivePaneItem() is "undefined"
+    atom.commands.dispatch(@, "core:confirm")
+
+  # current file is saved
+  else if ! atom.workspace.getActivePaneItem().isModified()
+    current = atom.workspace.getActivePaneItem()
+    atom.commands.dispatch(@, "core:confirm")
+    current.destroy()
+
+  # current file is not saved
+  else
+    atom.commands.dispatch(@, "core:confirm")
+# Note: Pending files open in the same tab but it _only_ works as long as the
+# file isn't modified or saved:
+# uri = atom.packages.getActivePackage('fuzzy-finder').mainModule.projectView.selectListView.getSelectedItem().uri
+# atom.workspace.open(uri, {pending: true})
+
 ## Clojure Commands
 ## ================
 # Some of the commands below are copied and tweaked from https://github.com/seancorfield/atom-chlorine-setup/blob/master/init.coffee

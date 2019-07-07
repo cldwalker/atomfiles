@@ -66,10 +66,13 @@
   # Misc
   'ctrl-, r': 'window:reload'
 
-## Command Palette
-## =================
+## Misc components
+## ===============
 '.command-palette':
   'cmd-c': 'me:copy-command'
+
+'.fuzzy-finder atom-text-editor[mini]':
+  'cmd-enter': 'me:replace-pane-item'
 
 ## Github
 ## ======
