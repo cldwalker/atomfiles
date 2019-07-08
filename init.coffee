@@ -26,26 +26,23 @@ atom.commands.add 'atom-text-editor', 'me:copy-command', ->
   command_name = document.querySelector('.command-palette li.selected').getAttribute('data-event-name')
   atom.clipboard.write(command_name)
 
-# From https://github.com/atom/fuzzy-finder/issues/81#issuecomment-339870281.
-# Tweaked unsaved case to stay in pane
+# Rather than destroy and create pane items like https://github.com/atom/fuzzy-finder/issues/81#issuecomment-339870281,
+# this approach uses the pending pane item available in a pane, https://atom.io/docs/api/v1.38.2/Pane.
+# This function opens a file in the active pane item unless the current file is modified.
 atom.commands.add '.fuzzy-finder atom-text-editor[mini]', 'me:replace-pane-item', ->
-  # you want to open in an empty pane
-  if typeof atom.workspace.getActivePaneItem() is "undefined"
+  paneItem = atom.workspace.getActivePaneItem()
+  # Dispatch with default opening if there are unsaved changes. Do _not_ clobber unsaved changes.
+  if paneItem.isModified and paneItem.isModified()
     atom.commands.dispatch(@, "core:confirm")
-
-  # current file is saved
-  else if ! atom.workspace.getActivePaneItem().isModified()
-    current = atom.workspace.getActivePaneItem()
-    atom.commands.dispatch(@, "core:confirm")
-    current.destroy()
-
-  # current file is not saved
   else
-    atom.commands.dispatch(@, "core:confirm")
-# Note: Pending files open in the same tab but it _only_ works as long as the
-# file isn't modified or saved:
-# uri = atom.packages.getActivePackage('fuzzy-finder').mainModule.projectView.selectListView.getSelectedItem().uri
-# atom.workspace.open(uri, {pending: true})
+    # Need to set current pane item to pending in order for Workspace#open to work as expected.
+    # I do not use pending pane items for anything else so do not restore original pending item
+    atom.workspace.getActivePane().setPendingItem(paneItem)
+    selectedUri = atom.packages.getActivePackage('fuzzy-finder').mainModule.projectView.selectListView.getSelectedItem().uri
+    # Open with pending to open file in same pane item - https://atom.io/docs/api/v1.38.2/Workspace#instance-open
+    atom.workspace.open(selectedUri, {pending: true, searchAllPanes: atom.config.get('fuzzy-finder.searchAllPanes')}).then (editor) ->
+      # Disable pending on new editor to avoid unexpected behavior e.g. future file openings replacing current pane item
+      editor.terminatePendingState()
 
 ## Clojure Commands
 ## ================
