@@ -1,14 +1,14 @@
 ## General Commands
 ## ================
 
-call_editor_command = (command) ->
+callEditorCommand = (command) ->
   editor = atom.workspace.getActiveTextEditor()
   editorView = atom.views.getView(editor)
   atom.commands.dispatch(editorView, command)
 
 # Tweaks opening of panel section to have reasonable default focus
 atom.commands.add 'atom-text-editor', 'me:install-packages-and-themes-with-focus', ->
-  call_editor_command('settings-view:install-packages-and-themes')
+  callEditorCommand('settings-view:install-packages-and-themes')
   # Hacky but effective
   setTimeout ->
     document.querySelector('.search-container .editor-container input').focus()
@@ -16,7 +16,7 @@ atom.commands.add 'atom-text-editor', 'me:install-packages-and-themes-with-focus
 
 # Tweaks opening of panel section to have reasonable default focus
 atom.commands.add 'atom-text-editor', 'me:view-installed-packages-with-focus', ->
-  call_editor_command('settings-view:view-installed-packages')
+  callEditorCommand('settings-view:view-installed-packages')
   # Hacky but effective
   setTimeout ->
     document.querySelector('.section-container .editor-container input').focus()
@@ -45,11 +45,11 @@ atom.commands.add '.fuzzy-finder atom-text-editor[mini]', 'me:replace-pane-item'
       editor.terminatePendingState()
 
 atom.commands.add '.find-and-replace atom-text-editor[mini]', 'me:replace-all-selection', ->
-  call_editor_command('find-and-replace:toggle-selection-option')
+  callEditorCommand('find-and-replace:toggle-selection-option')
   # Hack to give enought time for previous to take effect
   setTimeout ->
-    call_editor_command('find-and-replace:replace-all')
-    call_editor_command('find-and-replace:toggle-selection-option')
+    callEditorCommand('find-and-replace:replace-all')
+    callEditorCommand('find-and-replace:toggle-selection-option')
   , 500
 
 ## Clojure Commands
