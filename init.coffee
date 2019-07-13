@@ -44,6 +44,14 @@ atom.commands.add '.fuzzy-finder atom-text-editor[mini]', 'me:replace-pane-item'
       # Disable pending on new editor to avoid unexpected behavior e.g. future file openings replacing current pane item
       editor.terminatePendingState()
 
+atom.commands.add '.find-and-replace atom-text-editor[mini]', 'me:replace-all-selection', ->
+  call_editor_command('find-and-replace:toggle-selection-option')
+  # Hack to give enought time for previous to take effect
+  setTimeout ->
+    call_editor_command('find-and-replace:replace-all')
+    call_editor_command('find-and-replace:toggle-selection-option')
+  , 500
+
 ## Clojure Commands
 ## ================
 # Some of the commands below are copied and tweaked from https://github.com/seancorfield/atom-chlorine-setup/blob/master/init.coffee

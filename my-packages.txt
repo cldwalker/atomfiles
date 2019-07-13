@@ -13,6 +13,7 @@ git-plus@8.6.3
 ink@0.10.5
 keystroke@0.4.0
 lisp-paredit@0.6.0
+markdown-scroll-sync@2.1.2
 open-package@0.2.0
 package-switch@0.5.0
 project-folder@1.5.0

@@ -74,6 +74,9 @@
 '.fuzzy-finder atom-text-editor[mini]':
   'cmd-enter': 'me:replace-pane-item'
 
+'.find-and-replace atom-text-editor[mini]':
+  'ctrl-, R': 'me:replace-all-selection'
+
 ## Github
 ## ======
 '.github-CommitView-editor atom-text-editor:not([mini])':
