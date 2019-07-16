@@ -26,6 +26,7 @@
     packagesWithKeymapsDisabled: [
       "lisp-paredit"
       "git-blame"
+      "recent-files-fuzzy-finder"
     ]
     projectHome: "/Users/me/code"
     telemetryConsent: "limited"

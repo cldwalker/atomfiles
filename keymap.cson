@@ -65,6 +65,7 @@
 
   # Misc
   'ctrl-, r': 'window:reload'
+  'cmd-b': 'recent-files-fuzzy-finder:toggle-finder'
 
 ## Misc components
 ## ===============
