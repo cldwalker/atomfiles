@@ -67,4 +67,24 @@ atom.commands.add('.find-and-replace atom-text-editor[mini]', 'me:replace-all-se
   atom.commands.dispatch(target, 'find-and-replace:toggle-selection-option')
 })
 
+// Workspace commands
+// ==================
+function focusTracer (event) {
+  console.log('window.focus =', event.target)
+}
+
+// Copied from https://github.com/jasonrudolph/dotfiles/blob/master/atom/init.js
+// Great for debugging focus issues
+atom.commands.add('atom-workspace', {
+  // Log each time focus changes to a new element in Atom's UI.
+  'me:trace-focus' (event) {
+    window.addEventListener('focusin', focusTracer)
+  },
+
+  // Stop logging each time focus changes to a new element in Atom's UI.
+  'me:untrace-focus' (event) {
+    window.removeEventListener('focusin', focusTracer)
+  }
+})
+
 console.log("Init loaded!")
