@@ -73,7 +73,10 @@
   'cmd-c': 'me:copy-command'
 
 '.fuzzy-finder atom-text-editor[mini]':
-  'cmd-enter': 'me:replace-pane-item'
+  'cmd-enter': 'me:fuzzy-finder-open-in-place'
+
+'.recent-files-fuzzy-finder atom-text-editor[mini]':
+  'cmd-enter': 'me:recent-files-fuzzy-finder-open-in-place'
 
 '.find-and-replace atom-text-editor[mini]':
   'ctrl-, R': 'me:replace-all-selection'
