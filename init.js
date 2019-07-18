@@ -35,6 +35,21 @@ atom.commands.add('atom-text-editor', 'me:copy-command', () => {
   atom.clipboard.write(command_name)
 })
 
+function findCurrentRepositoryDirectory () {
+  const dirs = atom.project.getRepositories().map(r => r.repo.workingDirectory)
+  const path = atom.workspace.getActiveTextEditor().buffer.file.path
+  return dirs.find(d => path.includes(d))
+}
+
+atom.commands.add('atom-text-editor', 'me:project-find-current-repo', () => {
+  const dir = findCurrentRepositoryDirectory()
+  const repo = dir.match(/[^/]+$/)[0]
+  callEditorCommand('project-find:show')
+  // will fail first time if find-and-replace hasn't been used yet
+  const view = atom.packages.getActivePackage('find-and-replace').mainModule.projectFindView
+  view.pathsEditor.setText(repo)
+})
+
 // Component Specific Commands
 // ===========================
 

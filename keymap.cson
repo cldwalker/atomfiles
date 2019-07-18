@@ -37,6 +37,10 @@
   'ctrl-, c': 'application:open-your-config'
   'ctrl-, s': 'application:open-your-init-script'
 
+  # prefix: f(ind)
+  'ctrl-, f d': 'project-find:show-in-current-directory'
+  'ctrl-, f r': 'me:project-find-current-repo'
+
   # Open misc things
   # Like :e
   'ctrl-, e': 'advanced-open-file:toggle'
@@ -44,6 +48,8 @@
   # Project manipulation
   'ctrl-, o a': 'project-folder:add'
   'ctrl-, o r': 'project-folder:remove'
+
+  # Find
 
   # Git actions
   'alt-g l': 'git-plus:log-current-file'
