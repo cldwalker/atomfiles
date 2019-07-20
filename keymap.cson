@@ -39,6 +39,7 @@
 
   # prefix: f(ind)
   'ctrl-, f d': 'project-find:show-in-current-directory'
+  'ctrl-, f f': 'me:project-find-current-word'
   'ctrl-, f r': 'me:project-find-current-repo'
 
   # Open misc things

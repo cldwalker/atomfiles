@@ -47,7 +47,15 @@ atom.commands.add('atom-text-editor', 'me:project-find-current-repo', () => {
   callEditorCommand('project-find:show')
   // will fail first time if find-and-replace hasn't been used yet
   const view = atom.packages.getActivePackage('find-and-replace').mainModule.projectFindView
+  view.findEditor.setText(atom.workspace.getActiveTextEditor().getWordUnderCursor())
   view.pathsEditor.setText(repo)
+})
+
+atom.commands.add('atom-text-editor', 'me:project-find-current-word', () => {
+  callEditorCommand('project-find:show')
+  // will fail first time if find-and-replace hasn't been used yet
+  const view = atom.packages.getActivePackage('find-and-replace').mainModule.projectFindView
+  view.findEditor.setText(atom.workspace.getActiveTextEditor().getWordUnderCursor())
 })
 
 // Component Specific Commands

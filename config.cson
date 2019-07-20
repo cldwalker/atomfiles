@@ -36,6 +36,7 @@
     scrollPastEnd: true
     softWrap: true
   "find-and-replace":
+    closeFindPanelAfterSearch: true
     projectSearchResultsPaneSplitDirection: "right"
   "fuzzy-finder":
     preserveLastSearch: true
