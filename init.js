@@ -57,6 +57,16 @@ atom.commands.add('atom-text-editor', 'me:project-find-current-word', () => {
   // will fail first time if find-and-replace hasn't been used yet
   const view = atom.packages.getActivePackage('find-and-replace').mainModule.projectFindView
   view.findEditor.setText(atom.workspace.getActiveTextEditor().getWordUnderCursor())
+  view.pathsEditor.setText('')
+})
+
+atom.commands.add('atom-text-editor', 'me:project-find-in-keymap', () => {
+  callEditorCommand('project-find:show')
+  // will fail first time if find-and-replace hasn't been used yet
+  const view = atom.packages.getActivePackage('find-and-replace').mainModule.projectFindView
+  view.findEditor.setText(atom.workspace.getActiveTextEditor().getWordUnderCursor())
+  // Have to use pattern b/c exact path doesn't work
+  view.pathsEditor.setText('**/keymap.cson')
 })
 
 // Component Specific Commands
