@@ -1,14 +1,12 @@
-## General
-## =======
-'atom-workspace atom-text-editor':
-  # Useful for outlines
-  'alt-k': 'editor:move-line-up'
-  'alt-j': 'editor:move-line-down'
-  # Vim-like history
-  'ctrl-i': 'cursor-history:next'
-  'ctrl-o': 'cursor-history:prev'
-
-# Unsure if this is the right selector for general non-editor commands
+## Keybindings are vim centric though there is an occasional emacs-ism.
+## While I have a leadr key, I do stray from it for often used commands.
+## Keybinding conventions:
+## * Leader key: ctrl-,
+## * Git leader key: alt-g
+## * Second leader or sub leader keys are delineated with a prefix comment
+##
+## Workspace (global) keybindings
+## ==============================
 'atom-workspace atom-pane, atom-workspace atom-text-editor:not(.mini)':
   # Pane focus + movement
   'ctrl-h': 'window:focus-pane-on-left'
@@ -90,8 +88,7 @@
 '.find-and-replace atom-text-editor[mini]':
   'ctrl-, R': 'me:replace-all-selection'
 
-## Github
-## ======
+## Misc > Github
 '.github-CommitView-editor atom-text-editor:not([mini])':
   'ctrl-k': 'core:focus-previous'
 
@@ -99,8 +96,20 @@
   'ctrl-j': 'core:focus-next'
   'ctrl-k': 'core:focus-previous'
 
-## Normal-mode enhancements
-## ========================
+## Editor
+## ======
+
+## Editor > General
+'atom-workspace atom-text-editor':
+  # Useful for outlines
+  'alt-k': 'editor:move-line-up'
+  'alt-j': 'editor:move-line-down'
+  # Vim-like history
+  'ctrl-i': 'cursor-history:next'
+  'ctrl-o': 'cursor-history:prev'
+
+## Editor > Normal-mode enhancements
+## =================================
 'atom-text-editor.vim-mode-plus.normal-mode':
   # Use bookmark commands under mark keycombo
   'm l': 'bookmarks:view-all'
@@ -108,16 +117,16 @@
   'm n': 'bookmarks:jump-to-next-bookmark'
   'm p': 'bookmarks:jump-to-previous-bookmark'
 
-## JS
-## ==
+## Editor > JS
+## ===========
 'atom-text-editor[data-grammar="source js"]':
   # prefix: j(s- eval)
   'ctrl-, j e': 'me:eval-js'
   'ctrl-, j f': 'me:eval-js-file'
   'ctrl-, j t': 'me:toggle-console-or-notification'
 
-## Clojure + Lisp
-## ==============
+## Editor > Clojure + Lisp
+## =======================
 # Most of the keybindings here take into account vim-mode.
 # If you don't use vim you can just drop the vim-mode selectors
 # e.g. atom-text-editor.vim-mode-plus.normal-mode -> atom-text-editor
