@@ -4,10 +4,11 @@
 // has been restored.
 ////////////////////////////////////////////////////////////////////////////////
 require('./lib/clojure');
+require('./lib/eval-js');
 
 // Editor Commands
 // ================
-const callEditorCommand = (command) => {
+function callEditorCommand (command) {
   const editor = atom.workspace.getActiveTextEditor()
   const editorView = atom.views.getView(editor)
   atom.commands.dispatch(editorView, command)

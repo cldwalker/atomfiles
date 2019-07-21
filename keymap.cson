@@ -50,7 +50,8 @@
   'ctrl-, o a': 'project-folder:add'
   'ctrl-, o r': 'project-folder:remove'
 
-  # Find
+  # prefix: t(oggle)
+  'ctrl-, t l': 'notifications:toggle-log'
 
   # Git actions
   'alt-g l': 'git-plus:log-current-file'
@@ -68,11 +69,11 @@
   'alt-g s s': 'git-plus:stash-save'
   'alt-g s m': 'git-plus:stash-save-message'
   'alt-g s a': 'git-plus:stash-apply'
-  'ctrl-, q': 'core:cancel'
 
   # Misc
   'ctrl-, r': 'window:reload'
   'cmd-b': 'recent-files-fuzzy-finder:toggle-finder'
+  'ctrl-, q': 'core:cancel'
 
 ## Misc components
 ## ===============
@@ -106,6 +107,13 @@
   'm n': 'bookmarks:jump-to-next-bookmark'
   'm p': 'bookmarks:jump-to-previous-bookmark'
 
+## JS
+## ==
+'atom-text-editor[data-grammar="source js"]':
+  # prefix: j(s- eval)
+  'ctrl-, j e': 'me:eval-js'
+  'ctrl-, j f': 'me:eval-js-file'
+  'ctrl-, j t': 'me:toggle-console-or-notification'
 
 ## Clojure + Lisp
 ## ==============
