@@ -76,12 +76,11 @@ atom.commands.add('atom-text-editor', 'me:project-find-in-keymap', () => {
 // Rather than destroy and create pane items like https://github.com/atom/fuzzy-finder/issues/81#issuecomment-339870281,
 // this approach uses the pending pane item available in a pane, https://atom.io/docs/api/v1.38.2/Pane.
 // This function opens a file in the active pane item unless the current file is modified.
-atom.commands.add('.fuzzy-finder atom-text-editor[mini]', 'me:fuzzy-finder-open-in-place', () => {
+atom.commands.add('.fuzzy-finder atom-text-editor[mini]', 'me:fuzzy-finder-open-in-place', (event) => {
   const paneItem = atom.workspace.getActivePaneItem()
   // Dispatch with default opening if there are unsaved changes. Do _not_ clobber unsaved changes.
   if (paneItem.isModified && paneItem.isModified()) {
-    const target = document.querySelector('.fuzzy-finder atom-text-editor[mini]')
-    atom.commands.dispatch(target, "core:confirm")
+    atom.commands.dispatch(event.target, "core:confirm")
   } else {
     // Need to set current pane item to pending in order for Workspace#open to work as expected.
     // I do not use pending pane items for anything else so do not restore original pending item
@@ -97,22 +96,20 @@ atom.commands.add('.fuzzy-finder atom-text-editor[mini]', 'me:fuzzy-finder-open-
 
 // Resorts to hack, https://github.com/atom/fuzzy-finder/issues/81#issuecomment-339870281,
 // b/c atom.workspace.open failed on incorrectly implemented pane-item.title for this package
-atom.commands.add('.recent-files-fuzzy-finder atom-text-editor[mini]', 'me:recent-files-fuzzy-finder-open-in-place', () => {
+atom.commands.add('.recent-files-fuzzy-finder atom-text-editor[mini]', 'me:recent-files-fuzzy-finder-open-in-place', (event) => {
   const paneItem = atom.workspace.getActivePaneItem()
-  const target = document.querySelector('.recent-files-fuzzy-finder atom-text-editor[mini]')
   if (paneItem.isModified && paneItem.isModified()) {
-    atom.commands.dispatch(target, "core:confirm")
+    atom.commands.dispatch(event.target, "core:confirm")
   } else {
-    atom.commands.dispatch(target, "core:confirm")
+    atom.commands.dispatch(event.target, "core:confirm")
     atom.workspace.getActivePaneItem().destroy()
   }
 })
 
-atom.commands.add('.find-and-replace atom-text-editor[mini]', 'me:replace-all-selection', () => {
-  const target = document.querySelector('.find-and-replace atom-text-editor[mini]')
-  atom.commands.dispatch(target, 'find-and-replace:toggle-selection-option')
-  atom.commands.dispatch(target, 'find-and-replace:replace-all')
-  atom.commands.dispatch(target, 'find-and-replace:toggle-selection-option')
+atom.commands.add('.find-and-replace atom-text-editor[mini]', 'me:replace-all-selection', (event) => {
+  atom.commands.dispatch(event.target, 'find-and-replace:toggle-selection-option')
+  atom.commands.dispatch(event.target, 'find-and-replace:replace-all')
+  atom.commands.dispatch(event.target, 'find-and-replace:toggle-selection-option')
 })
 
 console.log("Init loaded!")
