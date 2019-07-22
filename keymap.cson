@@ -52,6 +52,8 @@
 
   # prefix: t(oggle)
   ', t l': 'notifications:toggle-log'
+  ', t f': 'me:toggle-trace-focus'
+  ', t c': 'me:toggle-log-command'
 
   # Git actions
   'alt-g l': 'git-plus:log-current-file'
