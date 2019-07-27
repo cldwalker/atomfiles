@@ -73,9 +73,9 @@
   'alt-g s a': 'git-plus:stash-apply'
 
   # Misc
-  ', r': 'window:reload'
+  ', r':   'window:reload'
   'cmd-b': 'recent-files-fuzzy-finder:toggle-finder'
-  ', q': 'core:cancel'
+  ', q':   'core:cancel'
 
 ## Misc components
 ## ===============
@@ -135,15 +135,15 @@
 # e.g. atom-text-editor.vim-mode-plus.normal-mode -> atom-text-editor
 #
 'atom-text-editor.vim-mode-plus.normal-mode[data-grammar="source clojure"]':
-  'g f':          'chlorine:go-to-var-definition'
-  'ctrl-d':       'chlorine:doc-for-var'
-  'space c':      'chlorine:connect-clojure-socket-repl'
-  'space C':      'chlorine:clear-console'
-  'shift-enter':  'chlorine:evaluate-block'
-  'ctrl-enter':   'chlorine:evaluate-top-block'
-  'space space':  'inline-results:clear-all'
-  'space x':      'chlorine:run-tests-in-ns'
-  'space t':      'chlorine:run-test-for-var'
+  'g f':         'chlorine:go-to-var-definition'
+  'ctrl-d':      'chlorine:doc-for-var'
+  'space c':     'chlorine:connect-clojure-socket-repl'
+  'space C':     'chlorine:clear-console'
+  'shift-enter': 'chlorine:evaluate-block'
+  'ctrl-enter':  'chlorine:evaluate-top-block'
+  'space space': 'inline-results:clear-all'
+  'space x':     'chlorine:run-tests-in-ns'
+  'space t':     'chlorine:run-test-for-var'
 
 'atom-text-editor.vim-mode-plus.visual-mode[data-grammar="source clojure"]':
   'alt-enter':    'chlorine:evaluate-selection'
@@ -153,7 +153,7 @@
   'ctrl-enter':  'chlorine:evaluate-top-block'
   'enter':       'lisp-paredit:newline'
   # Can't just use 'tab' b/c it overrides snippets
-  ', tab':  'lisp-paredit:indent'
+  ', tab':       'lisp-paredit:indent'
 
 # Normal-mode important since w/o it 'space' acts as leader key in insert mode
 # and then requires 2 spaces to create a space

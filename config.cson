@@ -81,4 +81,4 @@
     ]
   editor:
     autoIndent: false
-    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?…"
+    nonWordCharacters: "\\()\"':,.;<>~!@#$%^&*|+=[]{}`?…"
