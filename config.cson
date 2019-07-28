@@ -6,6 +6,10 @@
     plugins:
       playAudio: false
       screenShake: true
+  "atom-beautify":
+    general:
+      _analyticsUserId: "5b60b840-5531-4e21-8fcc-2f487bdcb59f"
+    js: {}
   "atom-fuzzy-grep":
     grepCommandString: "git grep -i -n"
   "autocomplete-plus":
