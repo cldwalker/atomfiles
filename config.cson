@@ -27,6 +27,10 @@
       "lisp-paredit"
       "git-blame"
       "recent-files-fuzzy-finder"
+      "multi-cursor"
+      "align-regexp"
+      "aligner"
+      "simple-align"
     ]
     projectHome: "/Users/me/code"
     telemetryConsent: "limited"

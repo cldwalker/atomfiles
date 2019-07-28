@@ -62,7 +62,8 @@
   'alt-g P': 'git-plus:pull'
   'alt-g p': 'git-puns:github-push-with-joke'
   'alt-g d': 'git-plus:diff-all'
-  'alt-g C': 'git-plus:commit-all'
+  'alt-g c': 'git-plus:commit-all'
+  'alt-g C': 'open-on-github:copy-url'
   'alt-g a': 'git-plus:commit-amend'
   'alt-g b': 'git-blame:toggle'
   # prefix: s(tash)
@@ -110,6 +111,21 @@
   # Vim-like history
   'ctrl-i': 'cursor-history:next'
   'ctrl-o': 'cursor-history:prev'
+
+  # selections
+  # Not using default cmds like editor:add-selection-below b/c they don't
+  # work w/ multi-cursor cmds
+  'ctrl-shift-k': 'multi-cursor:expandUp'
+  'ctrl-shift-j': 'multi-cursor:expandDown'
+  # No equivalent default cmd. editor:move-selection-left is close
+  # but moves all cursors instead of last one
+  'ctrl-shift-h': 'multi-cursor:move-last-cursor-left'
+  'ctrl-shift-l': 'multi-cursor:move-last-cursor-right'
+
+  # prefix: a(lignment)
+  ', a r': 'align-regexp:align-selection'
+  ', a s': 'simple-align:align'
+  ', a a': 'aligner:align'
 
 ## Editor > Normal-mode enhancements
 ## =================================
