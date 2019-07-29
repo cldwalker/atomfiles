@@ -92,6 +92,9 @@
 '.find-and-replace atom-text-editor[mini]':
   ', R': 'me:replace-all-selection'
 
+'.package-detail-view button':
+  'enter': 'me:button-press-to-click'
+
 ## Misc > Github
 '.github-CommitView-editor atom-text-editor:not([mini])':
   'ctrl-k': 'core:focus-previous'
