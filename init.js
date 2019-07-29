@@ -20,16 +20,14 @@ atom.commands.add('atom-text-editor', 'me:install-packages-and-themes-with-focus
   callEditorCommand('settings-view:install-packages-and-themes')
   // Hacky but effective
   setTimeout(() =>
-    document.querySelector('.search-container .editor-container input').focus()
-  , 500)
+    document.querySelector('.search-container .editor-container input').focus(), 500)
 })
 
 atom.commands.add('atom-text-editor', 'me:view-installed-packages-with-focus', () => {
   callEditorCommand('settings-view:view-installed-packages')
   // Hacky but effective
   setTimeout(() =>
-    document.querySelector('.section-container .editor-container input').focus()
-  , 500)
+    document.querySelector('.section-container .editor-container input').focus(), 500)
 })
 
 atom.commands.add('atom-text-editor', 'me:copy-command', () => {
@@ -37,7 +35,7 @@ atom.commands.add('atom-text-editor', 'me:copy-command', () => {
   atom.clipboard.write(command_name)
 })
 
-function findCurrentRepositoryDirectory () {
+function findCurrentRepositoryDirectory() {
   const dirs = atom.project.getRepositories().map(r => r.repo.workingDirectory)
   const path = atom.workspace.getActiveTextEditor().buffer.file.path
   return dirs.find(d => path.includes(d))
@@ -87,7 +85,10 @@ atom.commands.add('.fuzzy-finder atom-text-editor[mini]', 'me:fuzzy-finder-open-
     atom.workspace.getActivePane().setPendingItem(paneItem)
     const selectedUri = atom.packages.getActivePackage('fuzzy-finder').mainModule.projectView.selectListView.getSelectedItem().uri
     // Open with pending to open file in same pane item - https://atom.io/docs/api/v1.38.2/Workspace#instance-open
-    atom.workspace.open(selectedUri, {pending: true, searchAllPanes: atom.config.get('fuzzy-finder.searchAllPanes')}).then((editor) => {
+    atom.workspace.open(selectedUri, {
+      pending: true,
+      searchAllPanes: atom.config.get('fuzzy-finder.searchAllPanes')
+    }).then((editor) => {
       // Disable pending on new editor to avoid unexpected behavior e.g. future file openings replacing current pane item
       editor.terminatePendingState()
     })
