@@ -6,6 +6,7 @@
 require('./lib/clojure');
 require('./lib/eval-js');
 require('./lib/atom-inspection')
+require('./lib/on-activated-package')
 
 // Editor Commands
 // ================
@@ -115,27 +116,6 @@ atom.commands.add('.find-and-replace atom-text-editor[mini]', 'me:replace-all-se
 
 atom.commands.add('.package-detail-view button', 'me:button-press-to-click', (event) => {
   event.target.click()
-})
-
-// Package specific Setup
-// ======================
-function exModeActivate(package) {
-  const Ex = package.mainModule.provideEx()
-
-  // Open settings directly b/c Packages tab for Settings takes awhile to load
-  // for my packages
-  Ex.registerCommand('settings', (args) => {
-    const name = args.args.trim()
-    atom.workspace.open('atom://config/packages/' + name)
-  })
-  Ex.registerAlias('se', 'settings')
-}
-
-atom.packages.onDidActivatePackage((package) => {
-  console.log('Activate ' + package.name)
-  if (package.name == 'ex-mode') {
-    exModeActivate(package)
-  }
 })
 
 console.log("Init loaded!")

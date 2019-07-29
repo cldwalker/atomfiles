@@ -130,6 +130,10 @@
   ', a s': 'simple-align:align'
   ', a a': 'aligner:align'
 
+## Editor > Mini
+'atom-text-editor.mini':
+  'ctrl-[': 'core:cancel'
+
 ## Editor > Normal-mode enhancements
 ## =================================
 'atom-text-editor.vim-mode-plus.normal-mode':
