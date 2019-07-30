@@ -66,6 +66,11 @@
   'alt-g C': 'open-on-github:copy-url'
   'alt-g a': 'git-plus:commit-amend'
   'alt-g b': 'git-blame:toggle'
+  # using ', g c' since 'alt-g c' is taken
+  ', g c f': 'editor:checkout-head-revision'
+  ', g c o': 'git-plus:checkout-all-files'
+  ', g c b': 'git-plus:checkout'
+
   # prefix: s(tash)
   'alt-g s l': 'git-plus:manage-stashes'
   'alt-g s p': 'git-plus:stash-pop'
