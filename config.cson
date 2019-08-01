@@ -42,9 +42,9 @@
   "document-outline":
     showByDefault: false
   editor:
+    confirmCheckoutHeadRevision: false
     scrollPastEnd: true
     softWrap: true
-    confirmCheckoutHeadRevision: false
   "find-and-replace":
     closeFindPanelAfterSearch: true
     projectSearchResultsPaneSplitDirection: "right"
@@ -62,6 +62,8 @@
       pullRebase: true
   "lisp-paredit": {}
   "markdown-preview": {}
+  me:
+    checkoutAtomPackagesDir: "/Users/me/code/world"
   "project-folder":
     gitProjectDirectories: [
       "/Users/me/code"
