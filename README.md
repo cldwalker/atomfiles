@@ -26,10 +26,10 @@ These are packages I've tried. As someone who has built many editor plugins, thi
 
 * https://atom.io/packages/git-time-machine - Pretty visualization of commits. Didn't find the default UI to be conducive to a productive keyboard workflow.
 * https://atom.io/packages/maximize-panes - [Basic functionality didn't work](https://github.com/santip/maximize-panes/issues/23)
-
 * https://atom.io/packages/move-panes - This functionality already exists with the default commands `Pane: Move Active Item To Pane on ...`
 * https://atom.io/packages/atom-alignment - Alignment for multiple cursors didn't work for basic edn case. `simple-align` didn't have a problem
 * https://atom.io/packages/Zen - Didn't use it much and when I did I found the `vim-mode-plus:maximize-pane` command to be sufficient
+* https://atom.io/packages/open-package - Handy for opening external atom packages. Replaced with my package_open Ex command which opens bundled atom packages as well
 
 ## Credits
 

@@ -20,7 +20,6 @@ keystroke@0.4.0
 lisp-paredit@0.6.0
 markdown-scroll-sync@2.1.2
 multi-cursor@2.1.5
-open-package@0.2.0
 package-switch@0.5.0
 project-folder@1.5.0
 recent-files-fuzzy-finder@1.0.0
