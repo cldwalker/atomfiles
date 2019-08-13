@@ -31,6 +31,9 @@ These are packages I've tried. As someone who has built many editor plugins, thi
 * https://atom.io/packages/Zen - Didn't use it much and when I did I found the `vim-mode-plus:maximize-pane` command to be sufficient
 * https://atom.io/packages/open-package - Handy for opening external atom packages. Replaced with my package_open Ex command which opens bundled atom packages as well
 
+## License
+See LICENSE.md
+
 ## Credits
 
 My atom config stands on the shoulders of other helpful atom configs:

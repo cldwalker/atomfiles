@@ -15,6 +15,8 @@
     grepCommandString: "git grep -i -n"
   "autocomplete-plus":
     confirmCompletion: "tab"
+  chlorine:
+    "refresh-mode": "simple"
   "command-palette":
     preserveLastSearch: true
   core:
@@ -43,6 +45,7 @@
     showByDefault: false
   editor:
     confirmCheckoutHeadRevision: false
+    fontSize: 15
     scrollPastEnd: true
     softWrap: true
   "find-and-replace":
@@ -52,7 +55,7 @@
     preserveLastSearch: true
     useRipGrep: true
   "git-blame":
-    columnWidth: 318
+    columnWidth: 261
     ignoreWhiteSpaceDiffs: true
     showLastNames: false
   "git-plus":
@@ -93,4 +96,4 @@
     ]
   editor:
     autoIndent: false
-    nonWordCharacters: "\\()\"':,.;<>~!@#$%^&*|+=[]{}`?…"
+    nonWordCharacters: "\\()\"':,.;<~@#$%^&|+=[]!{}`?…"
