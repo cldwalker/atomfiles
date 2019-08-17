@@ -50,6 +50,7 @@
   "find-and-replace":
     closeFindPanelAfterSearch: true
     projectSearchResultsPaneSplitDirection: "right"
+    useRipgrep: true
   "fuzzy-finder":
     preserveLastSearch: true
     useRipGrep: true

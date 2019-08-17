@@ -15,8 +15,9 @@ editor-stats@0.17.0
 ex-mode@0.18.0
 git-blame@1.8.0
 git-plus@8.7.1
-ink@0.10.5
+ink@0.10.12
 keystroke@0.4.0
+language-lua-plus@1.6.0
 lisp-paredit@0.6.0
 markdown-scroll-sync@2.1.2
 multi-cursor@2.1.5
