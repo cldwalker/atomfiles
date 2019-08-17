@@ -33,7 +33,6 @@
 
   # Open specific files
   ', k': 'application:open-your-keymap'
-  ', c': 'application:open-your-config'
   ', s': 'application:open-your-init-script'
 
   # prefix: f(ind)
@@ -41,11 +40,13 @@
   ', f f': 'me:project-find-current-word'
   ', f k': 'me:project-find-in-keymap'
   ', f r': 'me:project-find-current-repo'
+  ', f c': 'vim-mode-plus:clear-highlight-search'
 
   # Open misc things
   # Like :e
   ', e': 'advanced-open-file:toggle'
   # prefix: o(pen)
+  ', o c': 'application:open-your-config'
   # Project manipulation
   ', o a': 'project-folder:add'
   ', o r': 'project-folder:remove'
@@ -134,6 +135,12 @@
   ', a r': 'align-regexp:align-selection'
   ', a s': 'simple-align:align'
   ', a a': 'aligner:align'
+
+  # prefix: y(ank)
+  ', y f': 'me:yank-current-file'
+
+  # prefix: c(lojure)
+  ', c l': 'chlorine:load-file'
 
 ## Editor > Mini
 'atom-text-editor.mini':

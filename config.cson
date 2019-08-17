@@ -45,7 +45,6 @@
     showByDefault: false
   editor:
     confirmCheckoutHeadRevision: false
-    fontSize: 15
     scrollPastEnd: true
     softWrap: true
   "find-and-replace":

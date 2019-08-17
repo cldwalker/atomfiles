@@ -69,6 +69,11 @@ atom.commands.add('atom-text-editor', 'me:project-find-in-keymap', () => {
   view.pathsEditor.setText('**/keymap.cson')
 })
 
+atom.commands.add('atom-text-editor', 'me:yank-current-file', () => {
+  const path = atom.workspace.getActiveTextEditor().buffer.file.path
+  atom.clipboard.write(path)
+})
+
 // Component Specific Commands
 // ===========================
 
