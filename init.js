@@ -36,34 +36,42 @@ atom.commands.add('atom-text-editor', 'me:copy-command', () => {
   atom.clipboard.write(command_name)
 })
 
+// Get a package that may not be activated. Activate as needed
+async function getUnactivatedPackage(package) {
+  if (!atom.packages.isPackageActive(package)) {
+    await atom.packages.activatePackage(package)
+  }
+  return atom.packages.getActivePackage(package);
+}
+
 function findCurrentRepositoryDirectory() {
   const dirs = atom.project.getRepositories().map(r => r.repo.workingDirectory)
   const path = atom.workspace.getActiveTextEditor().buffer.file.path
   return dirs.find(d => path.includes(d))
 }
 
-atom.commands.add('atom-text-editor', 'me:project-find-current-repo', () => {
+atom.commands.add('atom-text-editor', 'me:project-find-current-repo', async () => {
   const dir = findCurrentRepositoryDirectory()
   const repo = dir.match(/[^/]+$/)[0]
   callEditorCommand('project-find:show')
-  // will fail first time if find-and-replace hasn't been used yet
-  const view = atom.packages.getActivePackage('find-and-replace').mainModule.projectFindView
+  const pkg = await getUnactivatedPackage('find-and-replace');
+  const view = pkg.mainModule.projectFindView
   view.findEditor.setText(atom.workspace.getActiveTextEditor().getWordUnderCursor())
   view.pathsEditor.setText(repo)
 })
 
-atom.commands.add('atom-text-editor', 'me:project-find-current-word', () => {
+atom.commands.add('atom-text-editor', 'me:project-find-current-word', async () => {
   callEditorCommand('project-find:show')
-  // will fail first time if find-and-replace hasn't been used yet
-  const view = atom.packages.getActivePackage('find-and-replace').mainModule.projectFindView
+  const pkg = await getUnactivatedPackage('find-and-replace');
+  const view = pkg.mainModule.projectFindView
   view.findEditor.setText(atom.workspace.getActiveTextEditor().getWordUnderCursor())
   view.pathsEditor.setText('')
 })
 
-atom.commands.add('atom-text-editor', 'me:project-find-in-keymap', () => {
+atom.commands.add('atom-text-editor', 'me:project-find-in-keymap', async () => {
   callEditorCommand('project-find:show')
-  // will fail first time if find-and-replace hasn't been used yet
-  const view = atom.packages.getActivePackage('find-and-replace').mainModule.projectFindView
+  const pkg = await getUnactivatedPackage('find-and-replace');
+  const view = pkg.mainModule.projectFindView
   view.findEditor.setText(atom.workspace.getActiveTextEditor().getWordUnderCursor())
   // Have to use pattern b/c exact path doesn't work
   view.pathsEditor.setText('**/keymap.cson')
