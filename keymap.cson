@@ -1,8 +1,7 @@
 ## Keybindings are vim centric though there is an occasional emacs-ism.
 ## While I have a leader key, I stray from it for often used commands.
 ## Keybinding conventions:
-## * Leader key: ,
-##   * This causes a slight lag to type ','. I don't type that enough to care yet
+## * Leader key: ctrl-,
 ## * Git leader key: alt-g
 ## * Second leader or sub leader keys are delineated with a prefix comment
 ##
@@ -15,46 +14,46 @@
   'ctrl-k': 'window:focus-pane-above'
   'ctrl-l': 'window:focus-pane-on-right'
   # prefix: p(ane) or p(ackage)
-  ', p c': 'choose-pane:start'
-  ', p h': 'pane:split-left-and-move-active-item'
-  ', p j': 'window:move-active-item-to-pane-on-left'
-  ', p k': 'window:move-active-item-to-pane-on-right'
-  ', p l': 'pane:split-right-and-move-active-item'
+  'ctrl-, p c': 'choose-pane:start'
+  'ctrl-, p h': 'pane:split-left-and-move-active-item'
+  'ctrl-, p j': 'window:move-active-item-to-pane-on-left'
+  'ctrl-, p k': 'window:move-active-item-to-pane-on-right'
+  'ctrl-, p l': 'pane:split-right-and-move-active-item'
   # package
-  ', p i': 'me:install-packages-and-themes-with-focus'
-  ', p s': 'me:view-installed-packages-with-focus'
-  ', p a': 'package-switch:start-packages'
-  ', p d': 'package-switch:stop-packages'
-  ', p o': 'open-package:toggle'
+  'ctrl-, p i': 'me:install-packages-and-themes-with-focus'
+  'ctrl-, p s': 'me:view-installed-packages-with-focus'
+  'ctrl-, p a': 'package-switch:start-packages'
+  'ctrl-, p d': 'package-switch:stop-packages'
+  'ctrl-, p o': 'open-package:toggle'
 
   # Pane splitting
   'ctrl-|': 'pane:split-right-and-copy-active-item'
   'ctrl--': 'pane:split-down-and-copy-active-item'
 
   # Open specific files
-  ', k': 'application:open-your-keymap'
-  ', s': 'application:open-your-init-script'
+  'ctrl-, k': 'application:open-your-keymap'
+  'ctrl-, s': 'application:open-your-init-script'
 
   # prefix: f(ind)
-  ', f d': 'project-find:show-in-current-directory'
-  ', f f': 'me:project-find-current-word'
-  ', f k': 'me:project-find-in-keymap'
-  ', f r': 'me:project-find-current-repo'
-  ', f c': 'vim-mode-plus:clear-highlight-search'
+  'ctrl-, f d': 'project-find:show-in-current-directory'
+  'ctrl-, f f': 'me:project-find-current-word'
+  'ctrl-, f k': 'me:project-find-in-keymap'
+  'ctrl-, f r': 'me:project-find-current-repo'
+  'ctrl-, f c': 'vim-mode-plus:clear-highlight-search'
 
   # Open misc things
   # Like :e
-  ', e': 'advanced-open-file:toggle'
+  'ctrl-, e': 'advanced-open-file:toggle'
   # prefix: o(pen)
-  ', o c': 'application:open-your-config'
+  'ctrl-, o c': 'application:open-your-config'
   # Project manipulation
-  ', o a': 'project-folder:add'
-  ', o r': 'project-folder:remove'
+  'ctrl-, o a': 'project-folder:add'
+  'ctrl-, o r': 'project-folder:remove'
 
   # prefix: t(oggle)
-  ', t l': 'notifications:toggle-log'
-  ', t f': 'me:toggle-trace-focus'
-  ', t c': 'me:toggle-log-command'
+  'ctrl-, t l': 'notifications:toggle-log'
+  'ctrl-, t f': 'me:toggle-trace-focus'
+  'ctrl-, t c': 'me:toggle-log-command'
 
   # Git actions
   'alt-g l': 'git-plus:log-current-file'
@@ -67,10 +66,10 @@
   'alt-g C': 'open-on-github:copy-url'
   'alt-g a': 'git-plus:commit-amend'
   'alt-g b': 'git-blame:toggle'
-  # using ', g c' since 'alt-g c' is taken
-  ', g c f': 'editor:checkout-head-revision'
-  ', g c o': 'git-plus:checkout-all-files'
-  ', g c b': 'git-plus:checkout'
+  # using 'ctrl-, g c' since 'alt-g c' is taken
+  'ctrl-, g c f': 'editor:checkout-head-revision'
+  'ctrl-, g c o': 'git-plus:checkout-all-files'
+  'ctrl-, g c b': 'git-plus:checkout'
 
   # prefix: s(tash)
   'alt-g s l': 'git-plus:manage-stashes'
@@ -80,9 +79,9 @@
   'alt-g s a': 'git-plus:stash-apply'
 
   # Misc
-  ', r':   'window:reload'
-  'cmd-b': 'recent-files-fuzzy-finder:toggle-finder'
-  ', q':   'core:cancel'
+  'ctrl-, r': 'window:reload'
+  'cmd-b':    'recent-files-fuzzy-finder:toggle-finder'
+  'ctrl-, q': 'core:cancel'
 
 ## Misc components
 ## ===============
@@ -96,7 +95,7 @@
   'cmd-enter': 'me:recent-files-fuzzy-finder-open-in-place'
 
 '.find-and-replace atom-text-editor[mini]':
-  ', R': 'me:replace-all-selection'
+  'ctrl-, R': 'me:replace-all-selection'
 
 '.package-detail-view button':
   'enter': 'me:button-press-to-click'
@@ -132,15 +131,15 @@
   'ctrl-shift-l': 'multi-cursor:move-last-cursor-right'
 
   # prefix: a(lignment)
-  ', a r': 'align-regexp:align-selection'
-  ', a s': 'simple-align:align'
-  ', a a': 'aligner:align'
+  'ctrl-, a r': 'align-regexp:align-selection'
+  'ctrl-, a s': 'simple-align:align'
+  'ctrl-, a a': 'aligner:align'
 
   # prefix: y(ank)
-  ', y f': 'me:yank-current-file'
+  'ctrl-, y f': 'me:yank-current-file'
 
   # prefix: c(lojure)
-  ', c l': 'chlorine:load-file'
+  'ctrl-, c l': 'chlorine:load-file'
 
 ## Editor > Mini
 'atom-text-editor.mini':
@@ -159,9 +158,9 @@
 ## ===========
 'atom-text-editor[data-grammar="source js"]':
   # prefix: j(s- eval)
-  ', j e': 'me:eval-js'
-  ', j f': 'me:eval-js-file'
-  ', j t': 'me:toggle-console-or-notification'
+  'ctrl-, j e': 'me:eval-js'
+  'ctrl-, j f': 'me:eval-js-file'
+  'ctrl-, j t': 'me:toggle-console-or-notification'
 
 ## Editor > Clojure + Lisp
 ## =======================
@@ -188,7 +187,7 @@
   'ctrl-enter':  'chlorine:evaluate-top-block'
   'enter':       'lisp-paredit:newline'
   # Can't just use 'tab' b/c it overrides snippets
-  ', tab':       'lisp-paredit:indent'
+  'ctrl-, tab':  'lisp-paredit:indent'
 
 # Normal-mode important since w/o it 'space' acts as leader key in insert mode
 # and then requires 2 spaces to create a space
