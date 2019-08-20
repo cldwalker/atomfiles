@@ -222,8 +222,8 @@
   # Needed to start selection
   'space /': 'lisp-paredit:expand-selection'
   # Remaps simulate autoindent which was turned off due to bugginess
-  'o':       'keystroke o , tab'
-  'O':       'keystroke O , tab'
+  'o':       'keystroke o ctrl-, tab'
+  'O':       'keystroke O ctrl-, tab'
 
 'atom-text-editor.vim-mode-plus.visual-mode[data-grammar~="clojure"]':
   'space /': 'lisp-paredit:expand-selection'
