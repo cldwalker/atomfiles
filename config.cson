@@ -17,6 +17,7 @@
     confirmCompletion: "tab"
   chlorine:
     "refresh-mode": "simple"
+    "refresh-on-save": true
   "command-palette":
     preserveLastSearch: true
   core:

@@ -135,11 +135,17 @@
   'ctrl-, a s': 'simple-align:align'
   'ctrl-, a a': 'aligner:align'
 
+  # This is here instead of Clojure section b/c we want these to work
+  # in normal and visual mode
+  # prefix: c(lojure)
+
+  'ctrl-, c d': 'me:def-binding'
+  # This keybinding requires https://github.com/cldwalker/atom-chlorine
+  'ctrl-, c c': 'me:chlorine-connect-without-prompt'
+  'ctrl-, c l': 'chlorine:load-file'
+
   # prefix: y(ank)
   'ctrl-, y f': 'me:yank-current-file'
-
-  # prefix: c(lojure)
-  'ctrl-, c l': 'chlorine:load-file'
 
 ## Editor > Mini
 'atom-text-editor.mini':
