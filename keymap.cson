@@ -143,6 +143,7 @@
   # This keybinding requires https://github.com/cldwalker/atom-chlorine
   'ctrl-, c c': 'me:chlorine-connect-without-prompt'
   'ctrl-, c l': 'chlorine:load-file'
+  'ctrl-, c v': 'me:open-var-in-clojuredocs'
 
   # prefix: y(ank)
   'ctrl-, y f': 'me:yank-current-file'
