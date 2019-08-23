@@ -144,6 +144,7 @@
   'ctrl-, c c': 'me:chlorine-connect-without-prompt'
   'ctrl-, c l': 'chlorine:load-file'
   'ctrl-, c v': 'me:open-var-in-clojuredocs'
+  'ctrl-, c j': 'me:open-word-with-javadoc'
 
   # prefix: y(ank)
   'ctrl-, y f': 'me:yank-current-file'
