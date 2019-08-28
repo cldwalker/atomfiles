@@ -45,8 +45,8 @@ async function getUnactivatedPackage(package) {
 }
 
 function findCurrentRepositoryDirectory() {
-  const dirs = atom.project.getRepositories().map(r => r.repo.workingDirectory)
-  const path = atom.workspace.getActiveTextEditor().buffer.file.path
+  const dirs = atom.project.getPaths()
+  const path = atom.workspace.getActiveTextEditor().getPath()
   return dirs.find(d => path.includes(d))
 }
 
@@ -80,6 +80,44 @@ atom.commands.add('atom-text-editor', 'me:project-find-in-keymap', async () => {
 atom.commands.add('atom-text-editor', 'me:yank-current-file', () => {
   const path = atom.workspace.getActiveTextEditor().buffer.file.path
   atom.clipboard.write(path)
+})
+
+// Generate tags file for current project directory using exuberant ctags.
+// On osx, can install ctags with `brew install ctags`
+// Copied from https://github.com/jasonrudolph/dotfiles/blob/082ce1d7026a51b15f4c41faf7de837048c8c16e/atom/init.js#L77-L109
+// and then modified
+atom.commands.add('atom-text-editor', 'me:generate-ctags', () => {
+  const { exec } = require('child_process')
+  const fs = require('fs')
+  const path = findCurrentRepositoryDirectory()
+  const gitignore = path + "/.gitignore"
+  atom.notifications.addInfo('Generating ctags for '+ path)
+
+  // Can't use --exclude=@FILE b/c common gitignore patterns like /DIR or DIR/
+  // aren't recognized by ctags. See https://github.com/universal-ctags/ctags/issues/218 for more
+  const excludePaths = fs.existsSync(gitignore) ?
+    fs.readFileSync(gitignore).toString().replace(/\n$/, "").split("\n") :
+    ["node_modules", "resources", "log"]
+  const tag_command = "/usr/local/bin/ctags " +
+    // drop leading or trailing / to make ctags compatible
+    excludePaths.map(e => "--exclude='" + e.replace(/^\/|\/$/g, '') + "'").
+    join(" ") + " --tag-relative -R"
+
+  exec(tag_command, {cwd: path}, function (error, stdout, stderr) {
+    if (error) {
+      atom.notifications.addError('ctags exited with error',
+        {detail: error, dismissable: true}
+      )
+    } else if (stderr) {
+      atom.notifications.addWarning('Generated ctags (with warnings)',
+        {detail: stderr, dismissable: true}
+      )
+    } else {
+      atom.notifications.addSuccess('Finished generating ctags',
+        {detail: stdout}
+      )
+    }
+  })
 })
 
 // Component Specific Commands
