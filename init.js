@@ -83,27 +83,32 @@ atom.commands.add('atom-text-editor', 'me:yank-current-file', () => {
 })
 
 // Generate tags file for current project directory using exuberant ctags.
-// On osx, can install ctags with `brew install ctags`
+// On osx, install ctags with `brew install ctags`
 // Copied from https://github.com/jasonrudolph/dotfiles/blob/082ce1d7026a51b15f4c41faf7de837048c8c16e/atom/init.js#L77-L109
 // and then modified
 atom.commands.add('atom-text-editor', 'me:generate-ctags', () => {
   const { exec } = require('child_process')
   const fs = require('fs')
-  const path = findCurrentRepositoryDirectory()
-  const gitignore = path + "/.gitignore"
-  atom.notifications.addInfo('Generating ctags for '+ path)
+  const path = require('path')
+  const dir = findCurrentRepositoryDirectory() ||
+    // Default to using file's dir which is less accurate for git repos
+    path.dirname(atom.workspace.getActiveTextEditor().getPath())
 
-  // Can't use --exclude=@FILE b/c common gitignore patterns like /DIR or DIR/
-  // aren't recognized by ctags. See https://github.com/universal-ctags/ctags/issues/218 for more
-  const excludePaths = fs.existsSync(gitignore) ?
-    fs.readFileSync(gitignore).toString().replace(/\n$/, "").split("\n") :
-    ["node_modules", "resources", "log"]
-  const tag_command = "/usr/local/bin/ctags " +
-    // drop leading or trailing / to make ctags compatible
-    excludePaths.map(e => "--exclude='" + e.replace(/^\/|\/$/g, '') + "'").
-    join(" ") + " --tag-relative -R"
+  let tag_command
+  if (fs.existsSync(dir + "/.git")) {
+    // Don't use --exclude=@FILE approach for gitignore b/c gitignore patterns
+    // are not recognized by ctags. Instead generate ctags for git only files per
+    // https://github.com/universal-ctags/ctags/issues/218
+    atom.notifications.addInfo('Generating git based ctags in '+ dir)
+    tag_command = "git ls-files |ctags --tag-relative -R -L -"
+  } else {
+    atom.notifications.addInfo('Generating default ctags in '+ dir)
+    const excludePaths = ["node_modules", "resources", "log"]
+    tag_command = "ctags " + excludePaths.map(e => "--exclude=" + e).join(" ") +
+      " --tag-relative -R"
+  }
 
-  exec(tag_command, {cwd: path}, function (error, stdout, stderr) {
+  exec(tag_command, {cwd: dir}, function (error, stdout, stderr) {
     if (error) {
       atom.notifications.addError('ctags exited with error',
         {detail: error, dismissable: true}
