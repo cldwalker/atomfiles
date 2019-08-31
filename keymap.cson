@@ -120,6 +120,9 @@
   'ctrl-i': 'cursor-history:next'
   'ctrl-o': 'cursor-history:prev'
 
+  # misc
+  'ctrl-]': 'me:jump-to-ctags-source'
+
   # selections
   # Not using default cmds like editor:add-selection-below b/c they don't
   # work w/ multi-cursor cmds
