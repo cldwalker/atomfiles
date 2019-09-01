@@ -125,6 +125,31 @@ atom.commands.add('atom-text-editor', 'me:generate-ctags', () => {
   })
 })
 
+atom.commands.add('atom-text-editor', 'me:package-switch-exclusion-sync', () => {
+  const pkg = atom.packages.getActivePackage('package-switch')
+  const pkgData = pkg.mainModule.bundles.data
+  const bundledPackages = Array.from(
+    new Set(Object.values(pkgData).flatMap(e => e.packages.map(f => f.name)))
+  )
+
+  // Sync disabled w/ latest bundled
+  // Don't save to 'core.disabledPackages' b/c it is continuously overwritten
+  // by current list of activated packages
+  const disabledPackages = ["exception-reporting"].concat(bundledPackages)
+  atom.config.set("package-switch.SaveData", disabledPackages)
+
+  // Print update on sync and general status
+  const installedPackages = atom.packages.getAvailablePackages().filter(e => !e.isBundled).
+    map(e => e.name)
+  const notBundledPackages = installedPackages.filter(e => !bundledPackages.includes(e))
+  atom.notifications.addInfo(
+  `Updated disabled packages to ${disabledPackages.length} packages! There \
+are ${installedPackages.length} installed packages and ${bundledPackages.length} \
+packages not loaded at startup. The following ${notBundledPackages.length} \
+are loaded at startup: ${notBundledPackages.join(', ')}`,
+{dismissable: true})
+})
+
 // Component Specific Commands
 // ===========================
 

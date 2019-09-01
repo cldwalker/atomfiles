@@ -1,0 +1,130 @@
+{
+  "js": {
+    "packages": [
+      {
+        "name": "aligner",
+        "action": "added"
+      },
+      {
+        "name": "aligner-coffeescript",
+        "action": "added"
+      },
+      {
+        "name": "aligner-javascript",
+        "action": "added"
+      },
+      {
+        "name": "atom-beautify",
+        "action": "added"
+      }
+    ]
+  },
+  "clojure": {
+    "packages": [
+      {
+        "name": "chlorine",
+        "action": "added"
+      },
+      {
+        "name": "ink",
+        "action": "added"
+      },
+      {
+        "name": "keystroke",
+        "action": "added"
+      },
+      {
+        "name": "lisp-paredit",
+        "action": "added"
+      },
+      {
+        "name": "swackets",
+        "action": "added"
+      }
+    ]
+  },
+  "general": {
+    "packages": [
+      {
+        "name": "advanced-open-file",
+        "action": "added"
+      },
+      {
+        "name": "align-regexp",
+        "action": "added"
+      },
+      {
+        "name": "atom-fuzzy-grep",
+        "action": "added"
+      },
+      {
+        "name": "choose-pane",
+        "action": "added"
+      },
+      {
+        "name": "cursor-history",
+        "action": "added"
+      },
+      {
+        "name": "document-outline",
+        "action": "added"
+      },
+      {
+        "name": "ex-mode",
+        "action": "added"
+      },
+      {
+        "name": "git-blame",
+        "action": "added"
+      },
+      {
+        "name": "git-plus",
+        "action": "added"
+      },
+      {
+        "name": "git-puns",
+        "action": "added"
+      },
+      {
+        "name": "language-lua-plus",
+        "action": "added"
+      },
+      {
+        "name": "markdown-scroll-sync",
+        "action": "added"
+      },
+      {
+        "name": "multi-cursor",
+        "action": "added"
+      },
+      {
+        "name": "recent-files-fuzzy-finder",
+        "action": "added"
+      },
+      {
+        "name": "simple-align",
+        "action": "added"
+      },
+      {
+        "name": "structure-view",
+        "action": "added"
+      }
+    ]
+  },
+  "fun": {
+    "packages": [
+      {
+        "name": "activate-power-mode",
+        "action": "added"
+      },
+      {
+        "name": "autocomplete-emojis",
+        "action": "added"
+      },
+      {
+        "name": "editor-stats",
+        "action": "added"
+      }
+    ]
+  }
+}
