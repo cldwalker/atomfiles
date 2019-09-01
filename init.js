@@ -125,7 +125,11 @@ atom.commands.add('atom-text-editor', 'me:generate-ctags', () => {
   })
 })
 
-atom.commands.add('atom-text-editor', 'me:package-switch-exclusion-sync', () => {
+// Maintains config of two main package-switch features I use: blacklist and bundling.
+// Ensures that these two features are in sync. My usual workflow when adding a
+// a new package is add new package to bundle and then run this command to update
+// the blacklist.
+atom.commands.add('atom-text-editor', 'me:sync-auto-disabled-packages', () => {
   const pkg = atom.packages.getActivePackage('package-switch')
   const pkgData = pkg.mainModule.bundles.data
   const bundledPackages = Array.from(

@@ -34,6 +34,11 @@
       "aligner-coffeescript"
       "aligner-javascript"
       "atom-beautify"
+      "chlorine"
+      "ink"
+      "keystroke"
+      "lisp-paredit"
+      "swackets"
       "advanced-open-file"
       "align-regexp"
       "atom-fuzzy-grep"
@@ -52,11 +57,6 @@
       "activate-power-mode"
       "autocomplete-emojis"
       "editor-stats"
-      "chlorine"
-      "ink"
-      "keystroke"
-      "lisp-paredit"
-      "swackets"
     ]
     packagesWithKeymapsDisabled: [
       "lisp-paredit"

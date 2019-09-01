@@ -1,7 +1,8 @@
 ## Description
-This is my atom config which fully reproduces my keybindings and installed packages 🎉. My config is
-centered around web development workflows and primarily using clojure and vim keybindings. This config is
-being used on osx with atom version >= 1.40.0.
+This is my atom config which fully reproduces my keybindings and installed
+packages 🎉. My config is centered around web development, using Clojure and
+JavaScript and optimizing for keyboard only workflows. This
+config is being used on osx with atom version >= 1.40.0.
 
 ## Setup
 
@@ -12,6 +13,67 @@ git clone https://github.com/cldwalker/atomfiles ~/.atom
 cd ~/.atom
 apm install --packages-file my-packages.txt
 ```
+
+## Features
+
+### Fast Load Time and Package Bundles
+
+A [long running complaint](https://github.com/atom/atom/issues/2654) of Atom is
+its slow startup time. While I didn't experience this initially, this did become
+noticeable with 30 packages installed. I was able to reduce startup time to
+about a second by using
+[package-switch](https://github.com/fstiewitz/package-switch). The package
+allowed me to accomplish this by [configuring an auto-disable
+blacklist](https://github.com/fstiewitz/package-switch#auto-disable-packages) to
+disable all third party packages except for a select few. Then when I need to
+activate one of my predefined groups (or bundles) of packages, I [start
+it](https://github.com/fstiewitz/package-switch#execute-a-bundlepackage). To
+make management of the blacklist and unbundled packages easier, I have a
+`me:sync-auto-disabled-packages` command.
+
+My package bundles are listed in [package-switch.bundles](./package-switch.bundles).
+Here's a brief description of each bundle:
+* `general-often`: Packages I use often regardless of whether I'm writing code or documentation.
+  Usually the main bundle I'll load when writing anything.
+* `general-sometimes`: Packages I use sometimes e.g. less common workflows and languages.
+* `clojure`: Packages that I use when developing in Clojure and other lisps.
+* `js`: Packages that I use when developing in JS. There are some packages that
+  could be used with other languages like the aligner packages.
+* `fun`: Packages that are more fun than pragmatic. This is probably the least used bundle.
+
+### Developing with Clojure
+
+To enable some of these, start the clojure bundle with the `package-switch:start-packages` command.
+
+The main packages I use are:
+* `chlorine`: Provides a nice modern clj repl using the modern [socket
+  repl](https://clojure.org/reference/repl_and_main#_launching_a_socket_server).
+  Inline eval, jumping to source and docs just work.
+* `lisp-paredit`: Provides the standard paredit features. Not as powerful as emacs or lighttable's paredit but good enough. I do miss the raise operation
+* `swackets`: Provides distinctive colors for different parenthesis levels
+* `symbols-view`: Built-in package to jump to fns using ctags. Works nicely when not looking to load chlorine
+* `./lib/clojure.js`: Some personal customizations mostly around chlorine and specific things to eval or look up
+
+Also see `.clojure.source` section of config.cson.
+
+### Developing with JS
+
+To enable some of these, start the js bundle with the `package-switch:start-packages` command.
+
+Current packages I use:
+
+* `aligner*`: Packages to align things in JS
+* `atom-beautify`: Indent JS code nicely
+* `symbols-view`: Built-in package to jump to fns using ctags
+* `.lib/eval-js.js`: Let's me do light-weight repl driven development. This works
+  well only when things can be globally eval-ed. I also use devtools console when
+  wanting to inspect data more and am ok with constrained input
+
+### Developing in Atom
+TODO
+
+### Keyboard Centric Workflows
+TODO
 
 ## Miscellaneous
 
