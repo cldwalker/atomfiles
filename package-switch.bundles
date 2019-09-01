@@ -43,22 +43,10 @@
       }
     ]
   },
-  "general": {
+  "general-often": {
     "packages": [
       {
         "name": "advanced-open-file",
-        "action": "added"
-      },
-      {
-        "name": "align-regexp",
-        "action": "added"
-      },
-      {
-        "name": "atom-fuzzy-grep",
-        "action": "added"
-      },
-      {
-        "name": "choose-pane",
         "action": "added"
       },
       {
@@ -86,19 +74,35 @@
         "action": "added"
       },
       {
-        "name": "language-lua-plus",
-        "action": "added"
-      },
-      {
-        "name": "markdown-scroll-sync",
-        "action": "added"
-      },
-      {
         "name": "multi-cursor",
         "action": "added"
       },
       {
         "name": "recent-files-fuzzy-finder",
+        "action": "added"
+      }
+    ]
+  },
+  "general-sometimes": {
+    "packages": [
+      {
+        "name": "align-regexp",
+        "action": "added"
+      },
+      {
+        "name": "atom-fuzzy-grep",
+        "action": "added"
+      },
+      {
+        "name": "choose-pane",
+        "action": "added"
+      },
+      {
+        "name": "language-lua-plus",
+        "action": "added"
+      },
+      {
+        "name": "markdown-scroll-sync",
         "action": "added"
       },
       {
