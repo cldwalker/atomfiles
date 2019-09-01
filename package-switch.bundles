@@ -104,10 +104,6 @@
       {
         "name": "simple-align",
         "action": "added"
-      },
-      {
-        "name": "structure-view",
-        "action": "added"
       }
     ]
   },

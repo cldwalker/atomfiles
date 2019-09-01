@@ -145,7 +145,7 @@ atom.commands.add('atom-text-editor', 'me:package-switch-exclusion-sync', () => 
   atom.notifications.addInfo(
   `Updated disabled packages to ${disabledPackages.length} packages! There \
 are ${installedPackages.length} installed packages and ${bundledPackages.length} \
-packages not loaded at startup. The following ${notBundledPackages.length} \
+packages not loaded at startup. ${notBundledPackages.length} packages \
 are loaded at startup: ${notBundledPackages.join(', ')}`,
 {dismissable: true})
 })

@@ -1,7 +1,7 @@
 ## Description
 This is my atom config which fully reproduces my keybindings and installed packages 🎉. My config is
 centered around web development workflows and primarily using clojure and vim keybindings. This config is
-being used on osx with atom version >= 1.37.0.
+being used on osx with atom version >= 1.40.0.
 
 ## Setup
 
@@ -19,17 +19,18 @@ apm install --packages-file my-packages.txt
 I also have [git-puns](https://github.com/cldwalker/git-puns) installed. I have not included it in the setup as it is still experimental. So far it is providing a quite handy [ClojureScript REPL](https://github.com/cldwalker/git-puns#repl-features) for introspecting Atom.
 
 ### Updating Packages List
-After having modified your package list in atom, update the list with `apm ls --installed -bare > ~/.atom/my-packages.txt`.
+After having modified your package list in atom, update the list with `apm ls --installed --bare > ~/.atom/my-packages.txt`.
 
 ### Attempted Packages
-These are packages I've tried. As someone who has built many editor plugins, this is not meant to make anyone feel bad about their hard work. This section is mostly for me but sharing in case it helps others.
+These are packages I've tried. As someone who has built many editor plugins, this is not meant to make anyone feel bad about their hard work. This section is mostly so I can remember why I stopped using a plugin. Sharing in case it helps others.
 
 * https://atom.io/packages/git-time-machine - Pretty visualization of commits. Didn't find the default UI to be conducive to a productive keyboard workflow.
 * https://atom.io/packages/maximize-panes - [Basic functionality didn't work](https://github.com/santip/maximize-panes/issues/23)
 * https://atom.io/packages/move-panes - This functionality already exists with the default commands `Pane: Move Active Item To Pane on ...`
 * https://atom.io/packages/atom-alignment - Alignment for multiple cursors didn't work for basic edn case. `simple-align` didn't have a problem
 * https://atom.io/packages/Zen - Didn't use it much and when I did I found the `vim-mode-plus:maximize-pane` command to be sufficient
-* https://atom.io/packages/open-package - Handy for opening external atom packages. Replaced with my package_open Ex command which opens bundled atom packages as well
+* https://atom.io/packages/open-package - Handy for opening external atom packages. Replaced with my package_open Ex command which supports opening more packages
+* https://atom.io/packages/structure-view - Didn't use it much as it didn't have a keyboard friendly workflow and rarely provided a view I was looking for. Once I discovered the bundled 'symbols-view' package, which is keyboard friendly, this no longer makes sense to have.
 
 ## License
 See LICENSE.md

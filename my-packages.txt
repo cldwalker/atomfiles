@@ -25,7 +25,6 @@ package-switch@0.5.0
 project-folder@1.5.0
 recent-files-fuzzy-finder@1.0.0
 simple-align@0.2.0
-structure-view@0.2.1
 swackets@0.35.0
 vim-mode-plus@1.36.0
 
