@@ -142,6 +142,8 @@
   # prefix: c(lojure)
 
   'ctrl-, c d': 'me:def-binding'
+  'ctrl-, c n': 'me:eval-block-and-def-new-result'
+  'ctrl-, c s': 'me:eval-block-and-def-same-result'
   # This keybinding requires https://github.com/cldwalker/atom-chlorine
   'ctrl-, c c': 'me:chlorine-connect-without-prompt'
   'ctrl-, c l': 'chlorine:load-file'
