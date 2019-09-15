@@ -19,30 +19,6 @@
       }
     ]
   },
-  "clojure": {
-    "packages": [
-      {
-        "name": "chlorine",
-        "action": "added"
-      },
-      {
-        "name": "ink",
-        "action": "added"
-      },
-      {
-        "name": "keystroke",
-        "action": "added"
-      },
-      {
-        "name": "lisp-paredit",
-        "action": "added"
-      },
-      {
-        "name": "swackets",
-        "action": "added"
-      }
-    ]
-  },
   "general-often": {
     "packages": [
       {
@@ -123,6 +99,50 @@
       },
       {
         "name": "editor-stats",
+        "action": "added"
+      }
+    ]
+  },
+  "clojure": {
+    "packages": [
+      {
+        "name": "busy-signal",
+        "action": "added"
+      },
+      {
+        "name": "chlorine",
+        "action": "added"
+      },
+      {
+        "name": "ink",
+        "action": "added"
+      },
+      {
+        "name": "intentions",
+        "action": "added"
+      },
+      {
+        "name": "keystroke",
+        "action": "added"
+      },
+      {
+        "name": "linter",
+        "action": "added"
+      },
+      {
+        "name": "linter-kondo",
+        "action": "added"
+      },
+      {
+        "name": "linter-ui-default",
+        "action": "added"
+      },
+      {
+        "name": "lisp-paredit",
+        "action": "added"
+      },
+      {
+        "name": "swackets",
         "action": "added"
       }
     ]

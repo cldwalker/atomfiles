@@ -91,6 +91,8 @@
       splitPane: "Right"
     remoteInteractions:
       pullRebase: true
+  "linter-kondo":
+    lintsOnChange: false
   "lisp-paredit": {}
   "markdown-preview": {}
   me:
@@ -102,29 +104,34 @@
       "aligner-coffeescript"
       "aligner-javascript"
       "atom-beautify"
-      "chlorine"
-      "ink"
-      "keystroke"
-      "lisp-paredit"
-      "swackets"
       "advanced-open-file"
-      "align-regexp"
-      "atom-fuzzy-grep"
-      "choose-pane"
       "cursor-history"
       "document-outline"
       "ex-mode"
       "git-blame"
       "git-plus"
       "git-puns"
-      "language-lua-plus"
-      "markdown-scroll-sync"
       "multi-cursor"
       "recent-files-fuzzy-finder"
+      "align-regexp"
+      "atom-fuzzy-grep"
+      "choose-pane"
+      "language-lua-plus"
+      "markdown-scroll-sync"
       "simple-align"
       "activate-power-mode"
       "autocomplete-emojis"
       "editor-stats"
+      "busy-signal"
+      "chlorine"
+      "ink"
+      "intentions"
+      "keystroke"
+      "linter"
+      "linter-kondo"
+      "linter-ui-default"
+      "lisp-paredit"
+      "swackets"
     ]
     SaveRestore: true
   "project-folder":

@@ -43,7 +43,7 @@ Here's a brief description of each bundle:
 
 ### Developing with Clojure
 
-To enable some of these, start the clojure bundle with the `package-switch:start-packages` command.
+To enable some of these, start the clojure bundle with the `package-switch:start-packages` command. For `linter-kondo`, you'll need to install clj-kondo e.g. `brew install borkdude/brew/clj-kondo`.
 
 The main packages I use are:
 * `chlorine`: Provides a nice modern clj repl using the modern [socket
@@ -52,6 +52,7 @@ The main packages I use are:
 * `lisp-paredit`: Provides the standard paredit features. Not as powerful as emacs or lighttable's paredit but good enough. I do miss the raise operation
 * `swackets`: Provides distinctive colors for different parenthesis levels
 * `symbols-view`: Built-in package to jump to fns using ctags. Works nicely when not looking to load chlorine
+* `linter-kondo`: Linter powered by [clj-kondo](https://github.com/borkdude/clj-kondo). Doesn't auto-remove unused namespaces like Cursive but inline warnings about them are helpful enough
 * `./lib/clojure.js`: Some personal customizations mostly around chlorine and specific things to eval or look up
 
 Also see `.clojure.source` section of config.cson.

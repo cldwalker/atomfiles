@@ -1,0 +1,10 @@
+groups:
+  work: [
+    "~/code/priv/notes"
+    "~/code/work/bengal"
+  ]
+  pinboard: [
+    "~/code/priv/notes"
+    "~/code/repo/atomfiles"
+    "~/code/repo/my-pinboard"
+  ]
