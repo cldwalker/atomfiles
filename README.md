@@ -43,7 +43,7 @@ Here's a brief description of each bundle:
 
 ### Developing with Clojure
 
-To enable some of these, start the clojure bundle with the `package-switch:start-packages` command. For `linter-kondo`, you'll need to install clj-kondo e.g. `brew install borkdude/brew/clj-kondo`.
+To enable these, start the clojure bundle with the `package-switch:start-packages` command. For `linter-kondo`, you'll need to install clj-kondo e.g. `brew install borkdude/brew/clj-kondo`.
 
 The main packages I use are:
 * `chlorine`: Provides a nice modern clj repl using the modern [socket
@@ -59,7 +59,7 @@ Also see `.clojure.source` section of config.cson.
 
 ### Developing with JS
 
-To enable some of these, start the js bundle with the `package-switch:start-packages` command.
+To enable these, start the js bundle with the `package-switch:start-packages` command.
 
 Current packages I use:
 

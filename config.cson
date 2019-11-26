@@ -91,6 +91,8 @@
       splitPane: "Right"
     remoteInteractions:
       pullRebase: true
+  linter:
+    lintOnChange: false
   "linter-kondo":
     lintsOnChange: false
   "lisp-paredit": {}
