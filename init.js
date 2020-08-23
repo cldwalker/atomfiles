@@ -3,7 +3,8 @@
 // after packages are loaded/activated and after the previous editor state
 // has been restored.
 ////////////////////////////////////////////////////////////////////////////////
-require('./lib/clojure');
+// TODO: Re-enable once clojure.js is updated to use latest chlorine
+// require('./lib/clojure');
 require('./lib/eval-js');
 require('./lib/atom-inspection')
 require('./lib/on-activated-package')
