@@ -118,10 +118,6 @@
         "action": "added"
       },
       {
-        "name": "keystroke",
-        "action": "added"
-      },
-      {
         "name": "linter",
         "action": "added"
       },
