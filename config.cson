@@ -77,7 +77,6 @@
     showByDefault: false
   editor:
     confirmCheckoutHeadRevision: false
-    fontSize: 19
     scrollPastEnd: true
     softWrap: true
   "find-and-replace":
@@ -88,7 +87,7 @@
     preserveLastSearch: true
     useRipGrep: true
   "git-blame":
-    columnWidth: 341
+    columnWidth: 346
     ignoreWhiteSpaceDiffs: true
     showLastNames: false
   "git-plus":
