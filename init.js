@@ -161,16 +161,17 @@ are loaded at startup: ${notBundledPackages.join(', ')}`,
 // Rather than destroy and create pane items like https://github.com/atom/fuzzy-finder/issues/81#issuecomment-339870281,
 // this approach uses the pending pane item available in a pane, https://atom.io/docs/api/v1.38.2/Pane.
 // This function opens a file in the active pane item unless the current file is modified.
-atom.commands.add('.fuzzy-finder atom-text-editor[mini]', 'me:fuzzy-finder-open-in-place', (event) => {
+function replacePaneItem(selector, getCurrentURI) {
   const paneItem = atom.workspace.getActivePaneItem()
   // Dispatch with default opening if there are unsaved changes. Do _not_ clobber unsaved changes.
   if (paneItem.isModified && paneItem.isModified()) {
-    atom.commands.dispatch(event.target, "core:confirm")
+    const target = document.querySelector(selector)
+    atom.commands.dispatch(target, "core:confirm")
   } else {
     // Need to set current pane item to pending in order for Workspace#open to work as expected.
     // I do not use pending pane items for anything else so do not restore original pending item
     atom.workspace.getActivePane().setPendingItem(paneItem)
-    const selectedUri = atom.packages.getActivePackage('fuzzy-finder').mainModule.projectView.selectListView.getSelectedItem().uri
+    const selectedUri = getCurrentURI()
     // Open with pending to open file in same pane item - https://atom.io/docs/api/v1.38.2/Workspace#instance-open
     atom.workspace.open(selectedUri, {
       pending: true,
@@ -180,6 +181,19 @@ atom.commands.add('.fuzzy-finder atom-text-editor[mini]', 'me:fuzzy-finder-open-
       editor.terminatePendingState()
     })
   }
+
+}
+
+atom.commands.add('.fuzzy-finder atom-text-editor[mini]', 'me:fuzzy-finder-open-in-place', () => {
+  replacePaneItem('.fuzzy-finder atom-text-editor[mini]',
+    () => atom.packages.getActivePackage('fuzzy-finder').mainModule.projectView.selectListView.getSelectedItem().uri
+  )
+})
+
+atom.commands.add('.recent-files-fuzzy-finder atom-text-editor[mini]', 'me:recent-files-fuzzy-finder-open-in-place', () => {
+  replacePaneItem('.recent-files-fuzzy-finder atom-text-editor[mini]',
+    () => atom.packages.getActivePackage('recent-files-fuzzy-finder').mainModule.recentFilesView.selectListView.getSelectedItem()
+  )
 })
 
 // Resorts to hack, https://github.com/atom/fuzzy-finder/issues/81#issuecomment-339870281,
