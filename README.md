@@ -2,7 +2,7 @@
 This is my atom config which fully reproduces my keybindings and installed
 packages 🎉. My config is centered around web development, using Clojure and
 JavaScript and optimizing for keyboard only workflows. This
-config is being used on osx with atom version >= 1.40.0.
+config is being used on osx with atom version >= 1.56.0.
 
 ## Setup
 
