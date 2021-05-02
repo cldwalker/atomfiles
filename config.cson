@@ -139,7 +139,6 @@
       "linter-kondo"
       "linter-ui-default"
       "lisp-paredit"
-      "swackets"
     ]
     SaveRestore: true
   "project-folder":
@@ -148,9 +147,6 @@
     ]
     gitProjectSearchMaxDepth: 2
   "spell-check": {}
-  swackets:
-    colorBrackets: false
-    colorParens: true
   tabs:
     enableVcsColoring: true
   "tree-view": {}

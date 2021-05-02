@@ -50,7 +50,6 @@ The main packages I use are:
   repl](https://clojure.org/reference/repl_and_main#_launching_a_socket_server).
   Inline eval, jumping to source and docs just work.
 * `lisp-paredit`: Provides the standard paredit features. Not as powerful as emacs or lighttable's paredit but good enough. I do miss the raise operation
-* `swackets`: Provides distinctive colors for different parenthesis levels
 * `symbols-view`: Built-in package to jump to fns using ctags. Works nicely when not looking to load chlorine
 * `linter-kondo`: Linter powered by [clj-kondo](https://github.com/borkdude/clj-kondo). Doesn't auto-remove unused namespaces like Cursive but inline warnings about them are helpful enough
 * `./lib/clojure.js`: Some personal customizations mostly around chlorine and specific things to eval or look up
@@ -94,6 +93,8 @@ These are packages I've tried. As someone who has built many editor plugins, thi
 * https://atom.io/packages/Zen - Didn't use it much and when I did I found the `vim-mode-plus:maximize-pane` command to be sufficient
 * https://atom.io/packages/open-package - Handy for opening external atom packages. Replaced with my package_open Ex command which supports opening more packages
 * https://atom.io/packages/structure-view - Didn't use it much as it didn't have a keyboard friendly workflow and rarely provided a view I was looking for. Once I discovered the bundled 'symbols-view' package, which is keyboard friendly, this no longer makes sense to have.
+* https://atom.io/packages/swackets - Useful colorizing of paired brackets but github user is no
+  longer around and thus repo is longer maintained.
 
 ## License
 See LICENSE.md

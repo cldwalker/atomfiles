@@ -132,10 +132,6 @@
       {
         "name": "lisp-paredit",
         "action": "added"
-      },
-      {
-        "name": "swackets",
-        "action": "added"
       }
     ]
   }
