@@ -142,20 +142,17 @@
   # prefix: c(lojure)
   # clj noun: block, var, word, ns, selection, top-block
   # clj verb: tap, doc, pprint, prn, def
-  'ctrl-, c d': 'me:def-binding'
-  'ctrl-, c n': 'me:eval-block-and-def-new-result'
-  'ctrl-, c s': 'me:eval-block-and-def-same-result'
+  'ctrl-, c d b': 'chlorine:def-block'
+  'ctrl-, c d l': 'chlorine:def-let-bindings'
   'ctrl-, c l': 'chlorine:load-file'
   # 'ctrl-, c v': 'me:open-var-in-clojuredocs'
-  'ctrl-, c j': 'me:open-word-with-javadoc'
+  # 'ctrl-, c j': 'me:open-word-with-javadoc'
   'ctrl-, c k': 'chlorine:clear-inline-results'
   'ctrl-, c p': 'chlorine:pprint-block'
   'ctrl-, c P': 'chlorine:prn-block'
   'ctrl-, c v': 'chlorine:tap-var'
   'ctrl-, c t v': 'chlorine:tap-var'
   'ctrl-, c t b': 'chlorine:tap-block'
-  # This keybinding requires https://github.com/cldwalker/atom-chlorine
-  # 'ctrl-, c c': 'me:chlorine-connect-without-prompt'
 
   # prefix: y(ank)
   'ctrl-, y f': 'me:yank-current-file'
