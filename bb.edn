@@ -1,0 +1,14 @@
+;; Running this file requires having https://github.com/babashka/babashka
+{:tasks
+ {setup {:doc "Set up atomfiles with preferred symlink and experimental stuff"
+         :task (let [path (System/getenv "PWD")]
+                 (shell {:dir path} "apm install --packages-file my-packages.txt")
+                 (shell (format "ln -s %s ~/.atom" path))
+
+                 ;; Install git-puns
+                 (let [git-puns-path (str (System/getenv "HOME") "/.atom/packages/git-puns")]
+                   (shell (format "git clone %s %s"
+                                  (-github-repo "cldwalker/git-puns")
+                                  git-puns-path))
+                   (shell {:dir git-puns-path} "yarn install")
+                   (shell {:dir git-puns-path} "yarn shadow-cljs compile dev")))}}}
