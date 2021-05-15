@@ -142,17 +142,20 @@
   # prefix: c(lojure)
   # clj noun: block, var, word, ns, selection, top-block
   # clj verb: tap, doc, pprint, prn, def
+  'ctrl-, c c': 'chlorine:connect-socket-repl'
   'ctrl-, c d b': 'chlorine:def-block'
   'ctrl-, c d l': 'chlorine:def-let-bindings'
+  'ctrl-, c D c': 'chlorine:open-var-in-clojuredocs'
+  'ctrl-, c D j': 'chlorine:open-javadoc'
   'ctrl-, c l': 'chlorine:load-file'
-  # 'ctrl-, c v': 'me:open-var-in-clojuredocs'
-  # 'ctrl-, c j': 'me:open-word-with-javadoc'
   'ctrl-, c k': 'chlorine:clear-inline-results'
   'ctrl-, c p': 'chlorine:pprint-block'
   'ctrl-, c P': 'chlorine:prn-block'
-  'ctrl-, c v': 'chlorine:tap-var'
   'ctrl-, c t v': 'chlorine:tap-var'
   'ctrl-, c t b': 'chlorine:tap-block'
+  'ctrl-, c t n': 'chlorine:tap-namespace'
+  'ctrl-, c t s': 'chlorine:tap-selection'
+  'ctrl-, c t w': 'chlorine:tap-word'
 
   # prefix: y(ank)
   'ctrl-, y f': 'me:yank-current-file'
