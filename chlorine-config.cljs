@@ -135,6 +135,51 @@
                (update :text wrap-in-tap)
                (editor/eval-and-render)))))
 
+;; Portal cmds - vega-lite visualization cmds
+;; =============
+(defn- wrap-in-bar-chart
+  [code]
+  (let [bar-chart
+        {:mark "bar"
+         :encoding
+         {:x
+          {:field "a"
+           :type "nominal"
+           :axis {:labelAngle 0}}
+          :y {:field "b" :type "quantitative"}}}]
+    (str "(let [result " code
+         "values (mapv (fn [[k v]] {:a k :b v}) result)]
+         (assoc-in " bar-chart " [:data :values] values))")))
+
+(defn vis-bar-chart-map
+  "Display bar chart given map (or seq of pairs) where value (or second element) is an integer"
+  []
+  (p/let [block (editor/get-block)]
+         (when (seq (:text block))
+           (-> block
+               (update :text wrap-in-bar-chart)
+               (update :text wrap-in-tap)
+               (editor/eval-and-render)))))
+
+(defn- wrap-in-line-chart
+  [code]
+  (let [line-chart {:encoding {:x {:field "time" :type "quantitative"}
+                               :y {:field "value" :type "quantitative"}}
+                    :mark "line"}]
+    (str "(let [result " code
+        "values (map #(hash-map :time %2 :value %1) result (range))]
+         (assoc-in " line-chart " [:data :values] values))")))
+
+(defn vis-line-chart-seq
+  "Display basic line chart in portal given a sequence of integers"
+  []
+  (p/let [block (editor/get-block)]
+         (when (seq (:text block))
+           (-> block
+               (update :text wrap-in-line-chart)
+               (update :text wrap-in-tap)
+               (editor/eval-and-render)))))
+
 ;; Misc cmds
 ;; =========
 (defn setup-portal

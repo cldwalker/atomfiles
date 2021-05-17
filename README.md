@@ -52,7 +52,7 @@ The main packages I use are:
 * `lisp-paredit`: Provides the standard paredit features. Not as powerful as emacs or lighttable's paredit but good enough. I do miss the raise operation
 * `symbols-view`: Built-in package to jump to fns using ctags. Works nicely when not looking to load chlorine
 * `linter-kondo`: Linter powered by [clj-kondo](https://github.com/borkdude/clj-kondo). Doesn't auto-remove unused namespaces like Cursive but inline warnings about them are helpful enough
-* `./lib/clojure.js`: Some personal customizations mostly around chlorine and specific things to eval or look up
+* `./chlorine-config.cljs`: Some personal customizations mostly around chlorine and specific things to eval or look up
 
 Also see `.clojure.source` section of config.cson.
 
