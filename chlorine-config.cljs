@@ -189,3 +189,12 @@
          (editor/eval-and-render
           (merge block
                  {:text "(do (require '[portal.api :as p]) (def p (p/open)) (add-tap #'p/submit))"}))))
+
+(defn print-current-ns-tree
+  "Requires https://github.com/cldwalker/bb-clis/blob/master/bin/bb-ns-dep-tree to be installed"
+  []
+  ;; Have to invoke a block even if not using text
+  (p/let [block (editor/get-selection)]
+         (editor/eval-and-render
+          (merge block
+                 {:text "(-> (clojure.java.shell/sh \"bb-ns-dep-tree\" (str *ns*)) :out println)"}))))
