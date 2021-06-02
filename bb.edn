@@ -11,4 +11,7 @@
                                   (-github-repo "cldwalker/git-puns")
                                   git-puns-path))
                    (shell {:dir git-puns-path} "yarn install")
-                   (shell {:dir git-puns-path} "yarn shadow-cljs compile dev")))}}}
+                   (shell {:dir git-puns-path} "yarn shadow-cljs compile dev")))}
+  update-my-packages
+  {:doc "Update my-packages with latest installed"
+   :task (shell {:out "my-packages.txt"} "apm ls --installed --bare")}}}
