@@ -6,12 +6,17 @@
   ;; Resolves most kondo warnings but still one left
   {:clj-kondo/config '{:linters {:unresolved-symbol :off}}})
 
-(defn- wrap-in-tap [code]
+(defn- wrap-in-tap
+  "Wraps values in metadata to help identify what ran for result and when."
+  [code]
   (str "(let [value " code
        "      rr      (try (resolve 'requiring-resolve) (catch Throwable _))]"
        "  (if-let [rs (try (rr 'cognitect.rebl/submit) (catch Throwable _))]"
-       "    (rs '" code " value)"
-       "    (tap> value))"
+       "    (rs '" code  "(with-meta value {:code " (pr-str code) " "
+       ":created_at (java.util.Date.)}))"
+       "    (tap> (with-meta value {:code " (pr-str code) " "
+       ":created_at (java.util.Date.)"
+       "})))"
        "  value)"))
 
 (defn tap-block []
